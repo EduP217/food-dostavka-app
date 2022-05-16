@@ -1,0 +1,171 @@
+{
+    "Restaurant1": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant2": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant3": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant4": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant5": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant6": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant7": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant8": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant9": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant10": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant111": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    },
+    "Restaurant12": {
+        "Name" : "Name",
+        "Adress" : "Street",
+        "Menu": {
+            "option1" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            },
+            "option2" : {
+                "Food" : "NameofFood",
+                "Price" : "$"
+            }
+        }
+    }
+}
+// https://run.mocky.io/v3/56209d84-15ac-4a15-94dc-c30e9230d737
