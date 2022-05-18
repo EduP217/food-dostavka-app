@@ -1,0 +1,23 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+header h1{
+    color: orange;
+    font-family: 'Koulen';
+    font-size: 3em;
+}
+header h5{
+    font-family: 'koulen';
+    font-size: 1.6em;
+}
+.Title{
+    padding-left: 2em;
+    line-height: 0.1em;
+    
+}
+.block{
+    display: block;
+    float: left;
+    padding: 1em;
+}
