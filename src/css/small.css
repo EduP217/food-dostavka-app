@@ -1,9 +1,17 @@
+h1, h2, h3, h4, h5{
+    font-family: 'Koulen';
+}
+p{
+    font-family: 'Raleway';
+}
+
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 99px;
 }
 header h1{
-    color: orange;
+    color: #ED9542;
     font-family: 'Koulen';
     font-size: 3em;
 }
@@ -12,12 +20,52 @@ header h5{
     font-size: 1.6em;
 }
 .Title{
-    padding-left: 2em;
-    line-height: 0.1em;
-    
+    padding-left: 1em;
+    line-height: 0.2px;
 }
 .block{
     display: block;
     float: left;
-    padding: 1em;
+    padding: 0.5em;
+    width: 20%;
+}
+#cartbutton{
+    background-color: #ED9542;
+    border: 0;
+    border-radius: 35%;    
+}
+#search{
+    border-radius: 40%;
+    height: 10px;
+}
+
+/*  */
+#pizza1{
+    width: 100%;
+    z-index: -1;
+}
+#orangeblock{
+    background-color: #ED9542;
+    position: absolute;
+    margin-top: -55px;
+    width: 60%;
+    padding-left: 1em;
+    height: 21%;
+}
+#goto{
+    background-color: #004E64;
+    border: 0;
+    padding: 1em 6em 1em 6em;
+    color: white;
+    position: absolute;
+    right: 0;
+    margin-top: 70px;
+}
+#slogan{
+    font-size: 21px;
+    position: absolute;
+    top: 42%;
+    left: 5%;
+       
+ 
 }
