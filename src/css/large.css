@@ -1,0 +1,138 @@
+@media screen and (min-width: 35em) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 99px;
+    }
+    .Title{
+        padding-left: 3em;
+        line-height: 0.2px;
+    }    
+    /*  */
+    #pizza1{
+            width: 100%;
+            height: 400px;
+    }
+    #orangeblock{
+        background-color: #ED9542;
+        margin-top: -75px;
+        height: 35%;
+    }
+    #orangeblock h5{
+        font-size: 1.8em;    
+    }
+    #goto{
+        background-color: #004E64;
+        border: 0;
+        padding: 1em 6em 1em 6em;
+        color: white;
+        position: absolute;
+        right: 0;
+        margin-top: 70px;
+    }
+    #slogan{
+        font-size: 21px;
+        position: absolute;
+        top: 42%;
+        left: 5%;
+           
+     
+    }
+    #char{
+        align-items: center;
+        padding-left: 5em;
+        padding-right: 5em;
+        text-align: justify;
+    }
+    #delivery{
+        width: 100%;
+    }
+    #top-restaurants{
+        text-align: center;
+        line-height: 0.25em;
+    }
+    #top img{
+        width: 100%;
+    }
+    #top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        padding: 1em;
+    }
+    .restaurantview{
+        background-color: rgb(192, 186, 186);
+    
+    }
+    #showmore{
+        background-color: #ED9542;
+        transform: translate(50%, 50%);
+        padding: 1em;
+        border: 0;
+        color: white;
+    }
+    #subscribe{
+        text-align: center;
+        background-color: #ED9542;
+        height: 100px;
+        padding: 1em;
+    }
+    #sendbutton{
+        background-color: #004E64 ;
+    }
+    #join-us-img{
+        width: 50%;
+        visibility: hidden;
+    }
+    footer{
+        background-color: hsl(193, 100%, 20%);
+        text-align: center;
+        padding: 1em;
+        color: white;
+    }
+    /* LOGIN */
+    #loginimg{
+        width: 100%;
+    }
+    #loginsection{
+        text-align: center;
+        padding: 2em;
+    }
+    #loginsection a{
+        color: white;
+        text-decoration: none;
+    }
+    #fbbutton{
+        background-color: rgb(66, 66, 109);
+    }
+    #googlebutton{
+        background-color: blue;
+    }
+    #applebutton{
+        background-color: black;
+    }
+    #applebutton, #googlebutton, #fbbutton{
+        border: 0;
+        width: 80%;
+        height: 50%;
+        border-radius: 10px 10px 10px 10px;
+        padding: 0.5em 0;
+    }
+    #fbic, #googleic, #appleic{
+        width: 15px;
+        transform: translate(50% 50%);
+    }
+    #formlogin{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        transform: translate(13%, 0%);
+    }
+    #SMS, #WA{
+        padding: 0.5em;
+        width: 30%;
+        border-radius: 15%;
+        border: 0;
+    }
+       
+}
