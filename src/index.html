@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Dostavka Application</title>
+    <title>Food Dostavka</title>
     <link rel="stylesheet" href="css/small.css">
     <link href='https://fonts.googleapis.com/css?family=Koulen' rel='stylesheet'>
 </head>
@@ -17,9 +17,9 @@
         <section class="search">
             <div class="block" >
             <input type="text" id="search" class="block" placeholder="Search here.." name="search">
-            <button type="submit" id="submitbutton" class="block"></button>
+            <button type="submit" id="submitbutton" class="block"><img src="images/"></button>
             </div>
-            <button class="block" id="cartbutton"><img src="images/user.png" width="20px"></button>
+            <button class="block" id="cartbutton"><img src="images/icon-bag.svg" width="20px"></button>
             <a class="block" href="views/login.html"> Log In</a>
         </section>
     </header>
@@ -49,60 +49,66 @@
                 <P>You no longer have to leave your officeto enjoy the improvement of your city.</P>
             </div>
         </section>
-        <img src="images/delivery.jpg" alt="delivery man" id="delivery">
+        <img src="images/man-small.jpg" alt="delivery man" id="delivery">
 
         <section id="top-restaurants">
+            <br>
             <h3>TOP RESTAURANTS</h3>
             <a href="">See all restaurants</a>
             <br><br><br><br>
             <div id="top">
-                <section>
+                <section class="restaurantview">
                     <img src="http://picsum.photos/300/200" alt="placeholder">
                     <p>Restaurant</p>
                     <p>30 minutes</p>
                 </section>
-                <section>
+                <section class="restaurantview">
                     <img src="http://picsum.photos/300/200" alt="placeholder">
                     <p>Restaurant</p>
                     <p>30 minutes</p>
                 </section>
-                <section>
+                <section class="restaurantview">
                     <img src="http://picsum.photos/300/200" alt="placeholder">
                     <p>Restaurant</p>
                     <p>30 minutes</p>
                 </section>
-                <section>
+                <section class="restaurantview">
                     <img src="http://picsum.photos/300/200" alt="placeholder">
                     <p>Restaurant</p>
                     <p>30 minutes</p>
                 </section>
-                <section>
+                <section class="restaurantview">
                     <img src="http://picsum.photos/300/200" alt="placeholder">
                     <p>Restaurant</p>
                     <p>30 minutes</p>
                 </section>
-                <section>
+                <section class="restaurantview">
                     <img src="http://picsum.photos/300/200" alt="placeholder">
                     <p>Restaurant</p>
                     <p>30 minutes</p>
                 </section>
+                <button id="showmore">Show more restaurants</button>
             </div>
         </section>
         <br><br>
-        <section>
-            <h3>GGET ALL THE NEWS AND DISCOUNTS FROM US</h3>
-            <form>
-                <input type="email" placeholder="enter your email here...">
-                <input type="submit" content="Send">
-            </form>
-            <img>
+        <section id="subscribe">
+            <nav>
+                <h3>GET ALL THE NEWS AND DISCOUNTS FROM US</h3>
+                <form>
+                    <input type="email" placeholder="enter your email here...">
+                    <input id="sendbutton" type="submit" value="Send">
+                </form>
+            </nav>
+            <nav>
+                <img src="images/join-us-img.jpg" alt="people eating" id="join-us-img">
+            </nav>
         </section>
     </main>
     <footer>
         <p>Follow us on Social Media</p>
-        <img src="">
-        <img src="">
-        <img src="">
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/icon-fb.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/icon-insta.svg" alt="instagram"></a>
+        <a href="" target="https://www.twitter.com/"><img src="images/icon-twitter.svg" alt="twitter"></a>
     </footer>
 </body>
 </html>
