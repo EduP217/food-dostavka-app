@@ -4,7 +4,9 @@ h1, h2, h3, h4, h5{
 p{
     font-family: 'Raleway';
 }
-
+main{
+    border: 5px solid #004E64;
+}
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,4 +70,24 @@ header h5{
     left: 5%;
        
  
+}
+#char{
+    align-items: center;
+    padding-left: 5em;
+    padding-right: 5em;
+    text-align: justify;
+}
+#delivery{
+    width: 100%;
+}
+#top-restaurants{
+    text-align: center;
+    line-height: 0.25em;
+}
+#top img{
+    width: 150px;
+}
+#top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
