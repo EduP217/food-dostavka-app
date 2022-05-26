@@ -8,22 +8,11 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/large.css">
     <link href='https://fonts.googleapis.com/css?family=Koulen' rel='stylesheet'>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"></script>
 </head>
 <body>
-    <header>
-        <section class="Title">
-            <h1>FOOD</h1>
-            <H5>DOSTAVKA</H5>
-        </section>
-        <section class="search">
-            <div class="block" >
-            <input type="text" id="search" class="block" placeholder="Search here.." name="search">
-            <button type="submit" id="submitbutton" class="block"><img src="images/"></button>
-            </div>
-            <button class="block" id="cartbutton"><img src="images/icon-bag.svg" width="20px"></button>
-            <a class="block" href="views/login.html"> Log In</a>
-        </section>
-    </header>
+    <header id="main-header"></header>
     <main>
         <section>
             <img id="pizza1" src="images/pizza.jpg" alt="Pizza and drink">
@@ -102,11 +91,12 @@
             </nav>
         </section>
     </main>
-    <footer>
-        <p>Follow us on Social Media</p>
-        <a href="https://www.facebook.com/" target="_blank"><img src="images/icon-fb.svg" alt="facebook"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="images/icon-insta.svg" alt="instagram"></a>
-        <a href="" target="https://www.twitter.com/"><img src="images/icon-twitter.svg" alt="twitter"></a>
-    </footer>
+    <footer id="main-footer"></footer>
+
+    <!-- The Modal -->
+    <div id="site-modal" class="modal hide"></div>
+
+    <script src="js/main.js" type="module" defer></script>
+    <script async src="js/geographic.js" type="module" defer></script>    
 </body>
 </html>

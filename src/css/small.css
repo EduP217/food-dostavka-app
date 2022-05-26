@@ -163,3 +163,170 @@ footer{
     border-radius: 15%;
     border: 0;
 }
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 0.75rem 1rem;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.btn-ouline:hover,
+.btn-ouline:active,
+.btn-ouline:focus {
+    background-color: whitesmoke;
+}
+
+.btn-success {
+    background-color: #73b173;
+    color: white;
+}
+
+.btn-success:hover, 
+.btn-success:active, 
+.btn-success:focus {
+    background-color: #559455;
+    color: white;
+}
+
+.btn-success.btn-ouline {
+    border-color: #73b173;
+    color: #73b173;
+    background-color: white;
+}
+
+.btn-success.btn-ouline:hover, 
+.btn-success.btn-ouline:active, 
+.btn-success.btn-ouline:focus {
+    background-color: #73b173;
+    color: white;
+}
+
+.btn-disabled {
+    background-color: whitesmoke !important;
+    color: gray !important;
+    cursor: auto !important;
+    border-color: gray !important;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid #888;
+}
+
+.modal-body {
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
+.modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #888;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.modal-footer .modal-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group > input {
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group > button {
+    margin: 0.5rem 0;
+    width: 3rem;
+    border: 1px solid black;
+    border-radius: 0 5px 5px 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.input-group > button:hover,
+.input-group > button:active,
+.input-group > button:focus {
+    background-color: #73b173;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
