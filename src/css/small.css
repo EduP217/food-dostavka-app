@@ -68,8 +68,6 @@ header h5{
     position: absolute;
     top: 42%;
     left: 5%;
-       
- 
 }
 #char{
     align-items: center;
@@ -104,14 +102,12 @@ header h5{
     border: 0;
     color: white;
 }
-#subscribe{
-    text-align: center;
-    background-color: #ED9542;
-    height: 100px;
-    padding: 1em;
-}
+
 #sendbutton{
     background-color: #004E64 ;
+    border: none;
+    color: white;
+    padding: 0.3em;
 }
 #join-us-img{
     width: 50%;
