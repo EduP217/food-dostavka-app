@@ -1,0 +1,49 @@
+{
+  "name": "food-dostavka-app",
+  "version": "1.0.0",
+  "description": "applicatino food dostavka",
+  "main": "main.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "lint": "eslint *.js src/**/*.js",
+    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,css}\"",
+    "format-lint": "prettier --ignore-path ./.gitignore --single-quote --write \"./**/*.{js,ts}\"",
+    "test": "jest",
+    "babel": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduP217/food-dostavka-app.git"
+  },
+  "author": "Team 3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduP217/food-dostavka-app/issues"
+  },
+  "homepage": "https://github.com/EduP217/food-dostavka-app#readme",
+  "dependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "snowpack": "^3.8.8"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ]
+}
