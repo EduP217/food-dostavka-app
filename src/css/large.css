@@ -14,107 +14,88 @@
             height: 400px;
     }
     #orangeblock{
-        background-color: #ED9542;
+        position: absolute;
         margin-top: -75px;
-        height: 35%;
+        width: 45%;
+        padding-left: 1em;
+        margin-left: 10%;
+        height: 30%;
     }
     #orangeblock h5{
-        font-size: 1.8em;    
+        font-size: 1.2em;    
     }
     #goto{
-        background-color: #004E64;
-        border: 0;
-        padding: 1em 6em 1em 6em;
-        color: white;
-        position: absolute;
-        right: 0;
-        margin-top: 70px;
+        padding: 0.5em 3em 0.5em 3em;
+        position: relative;
+        margin-left: 15%;
     }
     #slogan{
-        font-size: 21px;
-        position: absolute;
-        top: 42%;
-        left: 5%;
-           
-     
+        font-size: 35px;
+        position: absolute;  
+        transform: translate(10%, 280%);
+    }
+    .char{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
     #char{
-        align-items: center;
-        padding-left: 5em;
-        padding-right: 5em;
-        text-align: justify;
+        background-color: #E4D9D5;
     }
     #delivery{
-        width: 100%;
+        width: 85%;
+        height: 350px;
+        object-fit: cover;
+        object-position: 10% 90%; 
+
     }
     #top-restaurants{
-        text-align: center;
-        line-height: 0.25em;
+        text-align: justify;
+        padding-left: 10%;
     }
-    #top img{
-        width: 100%;
+    #top-restaurants h3, #top-restaurants a{
+        padding-left: 2em;
     }
     #top{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 1em;
         padding: 1em;
     }
-    .restaurantview{
-        background-color: rgb(192, 186, 186);
+    #showmore{
+        display: none;
+    }
+    .restaurantview p{
+        padding-left: 1em;
     
     }
-    #showmore{
-        background-color: #ED9542;
-        transform: translate(50%, 50%);
-        padding: 1em;
-        border: 0;
-        color: white;
-    }
     #subscribe{
-        text-align: center;
-        background-color: #ED9542;
-        height: 100px;
-        padding: 1em;
+        width: 70%;
+        padding-left: 1em;
+        margin-left: 12%;
+        height: 2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    #sendbutton{
-        background-color: #004E64 ;
-    }
+   
     #join-us-img{
-        width: 50%;
-        visibility: hidden;
-    }
-    footer{
-        background-color: hsl(193, 100%, 20%);
-        text-align: center;
-        padding: 1em;
-        color: white;
+        visibility: visible;
+        width: 100%;
+        padding: 0%;
+        
     }
     /* LOGIN */
-    #loginimg{
-        width: 100%;
+    #loginmain{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    #loginsection{
-        text-align: center;
-        padding: 2em;
-    }
-    #loginsection a{
-        color: white;
-        text-decoration: none;
-    }
-    #fbbutton{
-        background-color: rgb(66, 66, 109);
-    }
-    #googlebutton{
-        background-color: blue;
-    }
-    #applebutton{
-        background-color: black;
-    }
+    
     #applebutton, #googlebutton, #fbbutton{
         border: 0;
         width: 80%;
-        height: 50%;
+        height: 10%;
         border-radius: 10px 10px 10px 10px;
         padding: 0.5em 0;
     }
@@ -134,5 +115,6 @@
         border-radius: 15%;
         border: 0;
     }
-       
+    
+    
 }
