@@ -1,0 +1,26 @@
+<!-- Modal content -->
+<div class="modal-content">
+    <div class="modal-header">
+        <h3>Select Shipping Location</h3>
+        <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+        <div id="ship-address-selected-container">
+            <label for="ship-selected">Shipping Location</label>
+            <div class="input-group">
+                <input id="ship-address-selected" name="ship-address-selected" type="text" class="form-input" disabled />
+                <button type="button" class="ship-address-cancel">&times;</button>
+            </div>
+        </div>
+        <div id="ship-address-container" class="hide">
+            <label for="ship-address">Shipping Location</label>
+            <input id="ship-address" name="ship-address" type="text" placeholder="Enter a location" class="form-input" autocomplete="off" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-options">
+            <button type="button" id="btn-cancel-geographic-place" class="btn btn-ouline">Cancel</button>
+            <button type="button" id="btn-save-geographic-place" class="btn btn-success btn-disabled" disabled>Save Changes</button>
+        </div>
+    </div>
+</div>
