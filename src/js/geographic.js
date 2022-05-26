@@ -4,7 +4,7 @@ import Geolocation from './geolocation.js';
 new Promise(async () => {
     await loadModalContent('geographic-modal.html');
     document.querySelector('.close').addEventListener('click', function () {
-        document.getElementById('site-modal').classList.toggle('hide');
+        document.getElementById('site-modal').classList.add('hide');
     });
 
     const geolocation = new Geolocation();

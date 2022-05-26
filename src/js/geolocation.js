@@ -37,7 +37,7 @@ export default class Geolocation {
                 const geocoder = new google.maps.Geocoder();
                 geocoder.geocode({
                     'latLng': latlng
-                }, function (results, status) {
+                }, (results, status) => {
                     console.log(results);
                     if (status === google.maps.GeocoderStatus.OK) {
                         if (results.length > 0) {
@@ -45,7 +45,7 @@ export default class Geolocation {
                             const resultFind = results[0];
                             console.log(resultFind);
                             setLocalStorage('currentPositionGeolocation', resultFind);
-                            document.getElementById('ship-address-selected').value = resultFind.formatted_address;
+                            this.displayPlaceSelected(resultFind);
                         } else {
                             console.log('No results found');
                         }
@@ -53,17 +53,17 @@ export default class Geolocation {
                         console.error('Geocoder failed due to: ' + status);
                     }
                 });
+            }).finally(() => {
+                document.getElementById('site-modal').classList.remove('hide');
             });
-            document.getElementById('site-modal').style.display = 'block';
         }
-
         this.place = getLocalStorage('currentPositionGeolocation');
-        document.getElementById('ship-address-selected').value = this.place.formatted_address;
+        this.displayPlaceSelected(this.place);
     }
     getCurrentLocation(){
         return new Promise((res,rej) => {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
+                navigator.geolocation.getCurrentPosition((position) => {
                     let pos = {
                         lat : position.coords.latitude,
                         lng : position.coords.longitude
@@ -71,6 +71,8 @@ export default class Geolocation {
                     setCookie('currentPositionLat',pos.lat,30);
                     setCookie('currentPositionLng',pos.lng,30);
                     res(pos);
+                }, (err) => {
+                    rej(err);
                 });
             } else {
                 // Browser doesn't support Geolocation
@@ -88,6 +90,11 @@ export default class Geolocation {
         setCookie('currentPositionLat',this.place.geometry.location.lat(),30);
         setCookie('currentPositionLng',this.place.geometry.location.lng(),30);
         setLocalStorage('currentPositionGeolocation', this.place);
-        document.getElementById('ship-address-selected').value = this.place.formatted_address;
+        this.displayPlaceSelected(this.place);
+    }
+    displayPlaceSelected(place) {
+        if(place){
+            document.getElementById('ship-address-selected').value = place.formatted_address;
+        }
     }
 }
