@@ -7,26 +7,26 @@ export default class Geolocation {
         this.place;
     }
     init() {
-        return new Promise((res,rej) => {
+        return new Promise((res, rej) => {
             this.initMap();
             res();
         });
     }
     initMap() {
-        this.addressElement = document.querySelector("#ship-address");
+        this.addressElement = document.querySelector('#ship-address');
         google.maps.event.addDomListener(window, 'load', this.initialize.bind(this));
     }
     async initialize() {
         this.autocomplete = new google.maps.places.Autocomplete(this.addressElement, {
             componentRestrictions: {
-                country: ["us", "ca", "pe"]
+                country: ['us', 'ca', 'pe']
             },
-            fields: ["address_components", "geometry", "formatted_address", "place_id"],
-            types: ["address"],
+            fields: ['address_components', 'geometry', 'formatted_address', 'place_id'],
+            types: ['address'],
         });
-        this.autocomplete.addListener("place_changed", this.getPlace.bind(this));
-        
-        if(!getCookie('currentPositionLat') && !getCookie('currentPositionLng')){
+        this.autocomplete.addListener('place_changed', this.getPlace.bind(this));
+
+        if (!getCookie('currentPositionLat') && !getCookie('currentPositionLng')) {
             await this.getCurrentLocation().then((pos) => {
                 /*const cookieLat = parseFloat(getCookie('currentPositionLat'));
                 const cookieLng = parseFloat(getCookie('currentPositionLng'));
@@ -41,7 +41,7 @@ export default class Geolocation {
                     console.log(results);
                     if (status === google.maps.GeocoderStatus.OK) {
                         if (results.length > 0) {
-                            //const resultFind = results.find(r => r.types.includes("street_address"));
+                            //const resultFind = results.find(r => r.types.includes('street_address'));
                             const resultFind = results[0];
                             console.log(resultFind);
                             setLocalStorage('currentPositionGeolocation', resultFind);
@@ -60,16 +60,16 @@ export default class Geolocation {
         this.place = getLocalStorage('currentPositionGeolocation');
         this.displayPlaceSelected(this.place);
     }
-    getCurrentLocation(){
-        return new Promise((res,rej) => {
+    getCurrentLocation() {
+        return new Promise((res, rej) => {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition((position) => {
                     let pos = {
-                        lat : position.coords.latitude,
-                        lng : position.coords.longitude
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
                     }
-                    setCookie('currentPositionLat',pos.lat,30);
-                    setCookie('currentPositionLng',pos.lng,30);
+                    setCookie('currentPositionLat', pos.lat, 30);
+                    setCookie('currentPositionLng', pos.lng, 30);
                     res(pos);
                 }, (err) => {
                     rej(err);
@@ -87,13 +87,13 @@ export default class Geolocation {
         this.addressElement.value = this.place.formatted_address;
     }
     savePlace() {
-        setCookie('currentPositionLat',this.place.geometry.location.lat(),30);
-        setCookie('currentPositionLng',this.place.geometry.location.lng(),30);
+        setCookie('currentPositionLat', this.place.geometry.location.lat(), 30);
+        setCookie('currentPositionLng', this.place.geometry.location.lng(), 30);
         setLocalStorage('currentPositionGeolocation', this.place);
         this.displayPlaceSelected(this.place);
     }
     displayPlaceSelected(place) {
-        if(place){
+        if (place) {
             document.getElementById('ship-address-selected').value = place.formatted_address;
         }
     }
