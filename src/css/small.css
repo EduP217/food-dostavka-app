@@ -1,12 +1,10 @@
-h1, h2, h3, h4, h5{
+/* h1, h2, h3, h4, h5{
     font-family: 'Koulen';
 }
 p{
     font-family: 'Raleway';
 }
-body{
-    border: 5px solid #004E64;
-}
+
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -42,11 +40,13 @@ header h5{
 }
 
 /*  */
-#pizza1{
+
+#pizza1 {
     width: 100%;
     z-index: -1;
 }
-#orangeblock{
+
+#orangeblock {
     background-color: #ED9542;
     position: absolute;
     margin-top: -55px;
@@ -54,7 +54,8 @@ header h5{
     padding-left: 1em;
     height: 21%;
 }
-#goto{
+
+#goto {
     background-color: #004E64;
     border: 0;
     padding: 1em 6em 1em 6em;
@@ -63,39 +64,46 @@ header h5{
     right: 0;
     margin-top: 70px;
 }
-#slogan{
+
+#slogan {
     font-size: 21px;
     position: absolute;
     top: 42%;
     left: 5%;
 }
-#char{
+
+#char {
     align-items: center;
     padding-left: 5em;
     padding-right: 5em;
     text-align: justify;
 }
-#delivery{
+
+#delivery {
     width: 100%;
 }
-#top-restaurants{
+
+#top-restaurants {
     text-align: center;
     line-height: 0.25em;
 }
-#top img{
+
+#top img {
     width: 100%;
 }
-#top{
+
+#top {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
     padding: 1em;
 }
-.restaurantview{
-    background-color: rgb(192, 186, 186);
 
+.restaurantview {
+    background-color: rgb(192, 186, 186);
 }
-#showmore{
+
+#showmore {
     background-color: #ED9542;
     transform: translate(50%, 50%);
     padding: 1em;
@@ -103,61 +111,80 @@ header h5{
     color: white;
 }
 
-#sendbutton{
-    background-color: #004E64 ;
+#sendbutton {
+    background-color: #004E64;
     border: none;
     color: white;
     padding: 0.3em;
 }
-#join-us-img{
+
+#join-us-img {
     width: 50%;
     visibility: hidden;
 }
-footer{
+
+footer {
     background-color: hsl(193, 100%, 20%);
     text-align: center;
     padding: 1em;
     color: white;
 }
+
+*/
 /* LOGIN */
-#loginimg{
+
+#loginimg {
     width: 100%;
 }
-#loginsection{
+
+#loginsection {
     text-align: center;
     padding: 2em;
 }
-#loginsection a{
+
+#loginsection a {
     color: white;
     text-decoration: none;
 }
-#fbbutton{
+
+#fbbutton {
     background-color: rgb(66, 66, 109);
 }
-#googlebutton{
+
+#googlebutton {
     background-color: blue;
 }
-#applebutton{
+
+#applebutton {
     background-color: black;
 }
-#applebutton, #googlebutton, #fbbutton{
+
+#applebutton,
+#googlebutton,
+#fbbutton {
     border: 0;
     width: 80%;
     height: 50%;
     border-radius: 10px 10px 10px 10px;
     padding: 0.5em 0;
 }
-#fbic, #googleic, #appleic{
+
+#fbic,
+#googleic,
+#appleic {
     width: 15px;
     transform: translate(50% 50%);
 }
-#formlogin{
+
+#formlogin {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 80%;
     transform: translate(13%, 0%);
 }
-#SMS, #WA{
+
+#SMS,
+#WA {
     padding: 0.5em;
     width: 30%;
     border-radius: 15%;
@@ -187,8 +214,8 @@ button {
     color: white;
 }
 
-.btn-success:hover, 
-.btn-success:active, 
+.btn-success:hover,
+.btn-success:active,
 .btn-success:focus {
     background-color: #559455;
     color: white;
@@ -200,8 +227,8 @@ button {
     background-color: white;
 }
 
-.btn-success.btn-ouline:hover, 
-.btn-success.btn-ouline:active, 
+.btn-success.btn-ouline:hover,
+.btn-success.btn-ouline:active,
 .btn-success.btn-ouline:focus {
     background-color: #73b173;
     color: white;
@@ -221,7 +248,9 @@ button {
     box-sizing: border-box;
 }
 
+
 /* Modal */
+
 .modal {
     position: fixed;
     z-index: 1;
@@ -285,13 +314,14 @@ button {
     justify-content: space-between;
 }
 
+
 /* Add Animation */
+
 @keyframes animatetop {
     from {
         top: -300px;
         opacity: 0
     }
-
     to {
         top: 0;
         opacity: 1
@@ -305,13 +335,13 @@ button {
     width: 100%;
 }
 
-.input-group > input {
+.input-group>input {
     border: 1px solid black;
     border-right: none;
     border-radius: 5px 0 0 5px;
 }
 
-.input-group > button {
+.input-group>button {
     margin: 0.5rem 0;
     width: 3rem;
     border: 1px solid black;
@@ -320,9 +350,9 @@ button {
     font-weight: bold;
 }
 
-.input-group > button:hover,
-.input-group > button:active,
-.input-group > button:focus {
+.input-group>button:hover,
+.input-group>button:active,
+.input-group>button:focus {
     background-color: #73b173;
     color: white;
 }
