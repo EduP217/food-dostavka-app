@@ -95,6 +95,8 @@ export default class Geolocation {
     displayPlaceSelected(place) {
         if(place){
             document.getElementById('ship-address-selected').value = place.formatted_address;
+            document.getElementById('locationInputGroup').value = place.formatted_address;
+            document.getElementById('locationInputGroup').setAttribute('alt', place.formatted_address);
         }
     }
 }
