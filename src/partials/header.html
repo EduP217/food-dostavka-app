@@ -1,12 +1,17 @@
-<section class="Title">
+<section class="title-logo">
     <h1>FOOD</h1>
     <H5>DOSTAVKA</H5>
 </section>
-<section class="search">
-    <div class="block">
-        <input type="text" id="search" class="block" placeholder="Search here.." name="search">
-        <button type="submit" id="submitbutton" class="block"><img src="images/"></button>
-    </div>
-    <button class="block" id="cartbutton"><img src="images/icon-bag.svg" width="20px"></button>
-    <a class="block" href="views/login.html"> Log In</a>
-</section>
+<div></div>
+<button type="button" id="iconLocation" class="geolocationbutton"><img src="/images/geolocation_black.png" alt="icon geolocation" /></button>
+<div class="input-group geolocation-input-group">
+    <input type="text" id="locationInputGroup" readonly>
+    <button type="button" class="geolocationbutton"><img src="/images/geolocation_black.png" alt="icon geolocation" /></button>
+</div>
+<button type="button" id="iconSearch" class="searchbutton"><img src="/images/icon-search.png" alt="icon search" /></button>
+<div class="input-group search-input-group">
+    <input type="text" placeholder="Search here.." id="searchInputGroup">
+    <button type="button" class="searchbutton"><img src="/images/icon-search.png" alt="icon search" /></button>
+</div>
+<button type="button" id="cartbutton"><img src="/images/icon-bag.svg" /> <span id="cartCount">0</span></button>
+<a href="/views/login.html" id="loginbutton">LOG IN</a>

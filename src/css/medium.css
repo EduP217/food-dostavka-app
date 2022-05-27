@@ -1,0 +1,77 @@
+@media screen and (min-width: 640px) {
+    header {
+        column-gap: 1rem;
+    }
+
+    header button#cartbutton {
+        width: 80px;
+        justify-content: space-evenly;
+        border-radius: 9px;
+        padding: 1.7em 0;
+    }
+    header button#cartbutton img {
+        display: block;
+    }
+
+    header button#cartbutton span {
+        font-size: 1.5em;
+    }
+
+    header button#iconLocation, header button#iconSearch {
+        display: none;
+    }
+    
+    header .geolocation-input-group, header .search-input-group {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header .geolocation-input-group > input, 
+    header .search-input-group > input {
+        border: 2px solid var(--accent2-color);
+        border-right: 0;
+    }
+
+    header .geolocation-input-group > button, 
+    header .search-input-group > button {
+        margin: 0;
+        padding: 0.25rem;
+        height: 100%;
+        border: 2px solid var(--accent2-color);
+    }
+
+    header .geolocation-input-group > input {
+        border-right: 0;
+        background-color: var(--accent-color);
+    }
+
+    header .geolocation-input-group > button {
+        border-left: 0;
+        background-color: var(--accent-color);
+    }
+
+    .top-restaurants .top {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .subscribe-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .subscribe-section .subscribe {
+        flex-basis: 50%;
+    }
+
+    .subscribe-section .subscribe-image {
+        flex-basis: 50%;
+    }
+
+    .subscribe-section .subscribe-image img {
+        height: 120%;
+    }
+
+    footer{
+        padding-top: 5rem;
+    }
+}
