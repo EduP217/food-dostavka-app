@@ -149,6 +149,8 @@ header .geolocation-input-group {
     display: none;
 }
 
+/* custom general styles */
+
 .hide {
     display: none;
 }
@@ -192,19 +194,31 @@ header .geolocation-input-group {
     color: white;
 }
 
-/*  */
-#pizza1{
-    width: 100%;
-    z-index: -1;
+.container {
+    max-width: 1050px !important;
+    margin: 0 auto;
 }
 
-.orangeblock{
+/*  */
+.banner-container {
+    height: 250px;
+}
+
+.banner-container img {
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.orangeblock {
     background-color: #ED9542;
     position: relative;
     margin-top: -55px;
     width: 60%;
     padding: .5em 1em;
-    height: 150px;
+    height: 225px;
 }
 
 .orangeblock p {
@@ -217,7 +231,7 @@ header .geolocation-input-group {
     position: absolute;
     text-align: center;
     width: 100%;
-    margin-top: -55px;
+    margin-top: -9.5rem;
 }
 
 .gotorestaurants button {
@@ -229,9 +243,13 @@ header .geolocation-input-group {
     border-radius: 0;
 }
 
+.well-content {
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
 .comments-grid-container {
-    background-color: var(--accent-color);
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
@@ -244,34 +262,36 @@ header .geolocation-input-group {
     margin: 0;
 }
 
-.comments-item:first-child img {
-    display: block;
+.comments-item img {
+    display: none;
     width: 50px;
     height: 70px;
     float: right;
     margin-top: -2.92rem;
 }
 
+.comments-item:first-child img {
+    display: block;
+}
+
+.delivery-section {
+    height: 450px;
+}
+
 #delivery{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 90%; 
 }
-/* 
-#slogan{
-    font-size: 21px;
-    position: absolute;
-    top: 42%;
-    left: 5%;
-}
-#char{
-    align-items: center;
-    padding-left: 5em;
-    padding-right: 5em;
-    text-align: justify;
-} */
 
 .top-restaurants{
     text-align: center;
     padding: 1rem 0;
+}
+
+.top-restaurants .well-content {
+    background-color: unset;
 }
 
 .top-restaurants h2 {
@@ -295,7 +315,14 @@ header .geolocation-input-group {
 }
 
 .restaurantview{
-    background-color: rgb(192, 186, 186);
+    background-color: whitesmoke;
+    text-align: left;
+    padding-bottom: 0.5emm;
+}
+
+.restaurantview p {
+    padding-left: 0.5em;
+    margin: 0.5em 0;
 }
 
 .subscribe-section {
@@ -320,7 +347,6 @@ header .geolocation-input-group {
 .subscribe-section .subscribe .input-group input {
     border: 0;
     border-radius: 0;
-    max-width: 225px;
 }
 
 .subscribe-section .subscribe .input-group button {
@@ -401,6 +427,8 @@ footer{
     border-radius: 15%;
     border: 0;
 }
+
+/* buttons */
 
 button {
     cursor: pointer;

@@ -7,7 +7,6 @@
         width: 80px;
         justify-content: space-evenly;
         border-radius: 9px;
-        padding: 1.7em 0;
     }
     header button#cartbutton img {
         display: block;
@@ -57,6 +56,18 @@
         background-color: var(--accent-color);
     }
 
+    .banner-container {
+        height: 300px;
+    }
+
+    .orangeblock {
+        height: 180px;
+    }
+
+    .gotorestaurants {
+        margin-top: -8rem;
+    }
+
     .top-restaurants .top {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -76,6 +87,10 @@
 
     .subscribe-section .subscribe-image img {
         height: 120%;
+    }
+
+    .subscribe-section .subscribe .input-group input {
+        max-width: 225px;
     }
 
     footer{

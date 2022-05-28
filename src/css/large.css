@@ -1,63 +1,126 @@
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 850px) {
+    body{
+        font-size: var(--large-font);
+    }
+    
     header{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: 99px;
+        grid-template-columns: 5rem 1fr 20rem 15rem auto 6rem;
     }
-    .Title{
-        padding-left: 3em;
-        line-height: 0.2px;
-    }    
-    /*  */
-    #pizza1{
-            width: 100%;
-            height: 400px;
+
+    header button#cartbutton {
+        margin-left: 2em;
     }
-    #orangeblock{
-        position: absolute;
-        margin-top: -75px;
-        width: 45%;
-        padding-left: 1em;
-        margin-left: 10%;
-        height: 30%;
+
+    .banner-container {
+        height: 400px;
     }
-    #orangeblock h5{
-        font-size: 1.2em;    
+
+    .well-content {
+        margin-right: 5%;
+        padding-left: 5%;
     }
-    #goto{
-        padding: 0.5em 3em 0.5em 3em;
-        position: relative;
-        margin-left: 15%;
+
+    .delivery-section {
+        height: 350px;
+        padding-left: 0;
     }
-    #slogan{
-        font-size: 35px;
-        position: absolute;  
-        transform: translate(10%, 280%);
+
+    .top-restaurants{
+        padding: 0;
     }
-    .char{
+
+    .top-restaurants .well-content {
+        background-color: whitesmoke;
+        padding: 1rem 0;
+    }
+
+    .top-restaurants .top {
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        padding-bottom: 5rem;
+    }
+    
+    .top-restaurants h2 {
+        margin: 0.5em;
+    }
+
+    .orangeblock {
+        width: 400px;
+        height: 200px;
+    }
+
+    .orangeblock p {
+        font-size: .9em;
+    }
+
+    .gotorestaurants {
+        margin-top: -10rem;
+        text-align: left;
+        padding: 0 1em;
+        width: unset;
+    }
+
+    .gotorestaurants h1{
+        margin-top: 0;
+        font-size: 2em;
+    }
+
+    .gotorestaurants button {
+        width: unset;
+    }
+
+    .comments-grid-container {
+        padding-bottom: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 2em;
-        padding-left: 1em;
-        padding-right: 1em;
+        grid-column-gap: 2.5rem;
     }
-    #char{
-        background-color: #E4D9D5;
+
+    .comments-item {
+        padding: 0;
     }
+
+    .comments-item img {
+        display: block;
+        margin-top: -2.1rem;
+    }
+
+    .comments-item h2 {
+        margin: .5rem 0;
+    }
+
+    .delivery-section {
+        height: 50rem;
+    }
+
     #delivery{
         width: 85%;
-        height: 350px;
-        object-fit: cover;
-        object-position: 10% 90%; 
-
     }
+
+    .top-restaurants-title {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        padding-left: 7rem;
+    }
+
+    .input-group > button {
+        width: 5rem;
+    }
+
+    .subscribe-section .subscribe .input-group input {
+        max-width: 300px;
+    }
+
     #top-restaurants{
         text-align: justify;
         padding-left: 10%;
     }
+
     #top-restaurants h3, #top-restaurants a{
         padding-left: 2em;
     }
+
     #top{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -67,10 +130,7 @@
     #showmore{
         display: none;
     }
-    .restaurantview p{
-        padding-left: 1em;
     
-    }
     #subscribe{
         width: 70%;
         padding-left: 1em;
