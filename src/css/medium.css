@@ -100,4 +100,9 @@
     footer{
         padding-top: 5rem;
     }
+    
+    /* LOGIN */
+    .login-banner {
+        height: 450px;
+    }
 }

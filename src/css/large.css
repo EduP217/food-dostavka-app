@@ -145,37 +145,34 @@
         visibility: visible;
         width: 100%;
         padding: 0%;
-        
+    }
+
+    .display-block {
+        display: block;
     }
     /* LOGIN */
-    #loginmain{
+    .loginmain{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        padding: 2rem 0;
     }
-    
-    #applebutton, #googlebutton, #fbbutton{
-        border: 0;
-        width: 80%;
-        height: 10%;
-        border-radius: 10px 10px 10px 10px;
-        padding: 0.5em 0;
+    .login-banner {
+        height: 750px;
     }
-    #fbic, #googleic, #appleic{
-        width: 15px;
-        transform: translate(50% 50%);
+    #loginsection {
+        padding: 0;
+        margin-top: 3em;
+        max-width: 350px;
     }
-    #formlogin{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 80%;
-        transform: translate(13%, 0%);
+
+    .btn-social-large {
+        padding: 0.75rem 2rem;
     }
-    #SMS, #WA{
-        padding: 0.5em;
-        width: 30%;
-        border-radius: 15%;
-        border: 0;
+    #loginsection a {
+        column-gap: 1rem;
     }
-    
-    
+    .btn-social-large a img {
+        width: 20px;
+        height: 20px;
+    }
 }

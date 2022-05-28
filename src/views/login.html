@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LogIn Food Dostavka</title>
-    <link rel="stylesheet" href="../css/small.css" />
-    <link rel="stylesheet" href="../css/large.css">
-    <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet"/>
-    <script src="../js/login.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <section class="Title">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LogIn Food Dostavka</title>
+  <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/small.css">
+  <link rel="stylesheet" href="/css/medium.css">
+  <link rel="stylesheet" href="/css/large.css">
+  <script src="/js/login.js" defer></script>
+</head>
+
+<body>
+  <header class="display-block">
+    <div class="container">
+      <section class="title-logo">
         <h1>FOOD</h1>
         <h5>DOSTAVKA</h5>
       </section>
-    </header>
-    <main id="loginmain">
-      
-      <img src="../images/img-small.jpg" alt="food" id="loginimg" />
-      <section id="loginsection">
-        <h2>LOG IN TO FOOD DOSTAVKA</h2>
-        <button id="fbbutton">
-          <a href="https://www.facebook.com/" target="_blank"> 
-            <img src="../images/icon-fb.svg" id="fbic">
-            Continue with Facebook
-          </a>
-        </button>
-        <br><br>
-        <button id="googlebutton"> 
-          <a href="https://www.gmail.com/" target="_blank">
-            <img src="../images/google-icon.jpg.crdownload" id="googleic">
-            Continue with Google
-          </a>
-        </button>
-        <br><br>
-        <button id="applebutton">
-          <a href="https://www.apple.com/" target="_blank">
-            <img src="../images/apple-icon.png" id="appleic">
-            Continue with Apple
-          </a>
-        </button>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="loginmain">
+        <div class="login-banner">
+          <img src="/images/img-small.jpg" alt="food" id="loginimg" />
+        </div>
+        <section id="loginsection">
+          <h2>LOG IN TO FOOD DOSTAVKA</h2>
+          <button id="fbbutton" class="btn btn-social-large">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="/images/icon-facebook.png" id="fbic">
+              Continue with Facebook
+            </a>
+          </button>
+          <button id="googlebutton" class="btn btn-social-large">
+            <a href="https://www.gmail.com/" target="_blank">
+              <img src="/images/icon-google.png" id="googleic">
+              Continue with Google
+            </a>
+          </button>
+          <button id="applebutton" class="btn btn-social-large">
+            <a href="https://www.apple.com/" target="_blank">
+              <img src="/images/icon-apple.png" id="appleic">
+              Continue with Apple
+            </a>
+          </button>
+          <div class="divisor">
+            <span class="divisor-label">Or</span>
+          </div>
+          <form action="/" method="POST" id="formlogin">
+            <div class="input-group">
+              <select name="code" id="code" class="form-input">
+                <option>--</option>
+                <option value="593">USA</option>
+                <option value="593">RUS</option>
+                <option value="55">ECU</option>
+                <option value="51">PER</option>
+              </select>
+              <input id="phone" type="tel" name="phone" class="form-input">
+            </div>
+          </form>
+          <div class="login-options">
+            <button id="WA" class="btn btn-disabled">WhatsApp</button>
+            <button id="SMS" class="btn btn-disabled">SMS</button>
+          </div>
+      </div>
+    </div>
+  </main>
+</body>
 
-        <hr />
-        or
-        <hr />
-        <p>Log-in with your phone number</p>
-        <form id="formlogin">
-          <select name="code" id="code"0>
-              <option>--</option>
-              <option>+593</option>
-              <option>+55</option>
-            </select>
-          <input id="phone" type="tel" name="phone">
-        </form>
-        <br>
-        <button id="SMS">SMS</button>
-        <button id="WA">WhatsApp</button>
-    </main>
-  </body>
-  <footer>
-    <p>Follow us on Social Media</p>
-    <a href="https://www.facebook.com/" target="_blank"
-      ><img src="../images/icon-fb.svg" alt="facebook"
-    /></a>
-    <a href="https://www.instagram.com/" target="_blank"
-      ><img src="../images/icon-insta.svg" alt="instagram"
-    /></a>
-    <a href="" target="https://www.twitter.com/"
-      ><img src="../images/icon-twitter.svg" alt="twitter"
-    /></a>
-  </footer>
 </html>
