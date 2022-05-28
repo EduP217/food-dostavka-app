@@ -90,11 +90,12 @@
     }
 
     .delivery-section {
-        height: 50rem;
+        height: 35rem;
     }
 
     #delivery{
         width: 85%;
+        object-position: 75% 95%;
     }
 
     .top-restaurants-title {
@@ -130,7 +131,7 @@
     #showmore{
         display: none;
     }
-    
+
     #subscribe{
         width: 70%;
         padding-left: 1em;

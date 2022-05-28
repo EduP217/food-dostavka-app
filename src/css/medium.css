@@ -67,6 +67,10 @@
     .gotorestaurants {
         margin-top: -8rem;
     }
+    
+    #delivery{
+        object-position: 60% 95%;
+    }
 
     .top-restaurants .top {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

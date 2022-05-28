@@ -21,7 +21,10 @@
     <header id="main-header"></header>
     <main>
         <section class="banner-container">
-            <img id="pizza1" src="images/pizza.jpg" alt="Pizza and drink">
+            <picture>
+                <source media="(min-width:850px)" srcset="/images/bg-img.png">
+                <img src="/images/bg-small.jpg" alt="Pizza and drink" id="pizza1" >
+            </picture>
         </section>
         <div class="container">
             <section class="orangeblock">
@@ -57,7 +60,10 @@
             </div>
         </section>
         <section class="delivery-section well-content">
-            <img src="images/man-small.jpg" alt="delivery man" id="delivery">
+            <picture>
+                <source media="(min-width:640px)" srcset="/images/man.jpg">
+                <img src="images/man-small.jpg" alt="delivery man" id="delivery">
+            </picture>
         </section>
         <section class="top-restaurants">
             <section class="well-content">
@@ -71,27 +77,27 @@
                     <div class="restaurantview">
                         <img src="http://picsum.photos/300/200" alt="placeholder">
                         <p><b>Restaurant</b></p>
-                        <p>30 minutes</p>
+                        <p class="text-danger">30 minutes</p>
                     </div>
                     <div class="restaurantview">
                         <img src="http://picsum.photos/300/200" alt="placeholder">
                         <p><b>Restaurant</b></p>
-                        <p>30 minutes</p>
+                        <p class="text-danger">30 minutes</p>
                     </div>
                     <div class="restaurantview">
                         <img src="http://picsum.photos/300/200" alt="placeholder">
                         <p><b>Restaurant</b></p>
-                        <p>30 minutes</p>
+                        <p class="text-danger">30 minutes</p>
                     </div>
                     <div class="restaurantview">
                         <img src="http://picsum.photos/300/200" alt="placeholder">
                         <p><b>Restaurant</b></p>
-                        <p>30 minutes</p>
+                        <p class="text-danger">30 minutes</p>
                     </div>
                     <div class="restaurantview">
                         <img src="http://picsum.photos/300/200" alt="placeholder">
                         <p><b>Restaurant</b></p>
-                        <p>30 minutes</p>
+                        <p class="text-danger">30 minutes</p>
                     </div>
                 </div>
             </div>
