@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Dostavka</title>
     <link rel="stylesheet" href="css/small.css" />
     <link rel="stylesheet" href="css/large.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Koulen"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet" />
 
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"
-    ></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,500&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,500&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap" rel="stylesheet" />
+</head>
 
-  <body>
+<body>
     <header id="main-header"></header>
     <main class="rest-main">
-      <span>Sort by: </span>
-      <label>
+        <span>Sort by: </span>
+        <label>
         <select id="sorting" data-current-sorting="sortByName">
           <option value="sortByName">name</option>
           <option value="sortByPrice">rating</option>
@@ -36,152 +28,92 @@
         </select>
       </label>
 
-      <div>
-        <h1 class="heading_rest">restaurants for you</h1>
-      </div>
-      <div class="all_rest">
-        <a href="/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-      </div>
-      <div class="all_rest">
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-      </div>
-      <div class="all_rest">
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-        <a href="/src/rest_page.html" class="restaurant_card">
-          <img
-            src="http://picsum.photos/300/200"
-            alt="placeholder"
-            class="restaurant_card_img"
-          />
-          <p class="rest_name">Restaurant</p>
-          <p class="rest_time">30 minutes</p>
-        </a>
-      </div>
+        <div>
+            <h1 class="heading_rest">restaurants for you</h1>
+        </div>
+        <div class="all_rest">
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+        </div>
+        <div class="all_rest">
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+        </div>
+        <div class="all_rest">
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+            <a href="/rest_page.html" class="restaurant_card">
+                <img src="http://picsum.photos/300/200" alt="placeholder" class="restaurant_card_img" />
+                <p class="rest_name">Restaurant</p>
+                <p class="rest_time">30 minutes</p>
+            </a>
+        </div>
 
-      <button id="showmore">Show more restaurants</button>
+        <button id="showmore">Show more restaurants</button>
     </main>
     <footer id="main-footer"></footer>
 
@@ -190,5 +122,6 @@
 
     <script src="js/main.js" type="module" defer></script>
     <script async src="js/geographic.js" type="module" defer></script>
-  </body>
+</body>
+
 </html>
