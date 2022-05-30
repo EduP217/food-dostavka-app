@@ -20,6 +20,15 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"
       defer
     ></script>
+
+    <!-- HTML template to build a product card -->
+    <template id="product-card-template">
+      <div class="restaurantview restaurant-card">
+        <img src="http://picsum.photos/300/200" alt="placeholder" />
+        <p class="restaurant-card__name">Restaurant</p>
+        <p class="text-danger restaurant-card__text">30 minutes</p>
+      </div>
+    </template>
   </head>
 
   <body>
@@ -86,32 +95,7 @@
           </div>
         </section>
         <div class="container">
-          <div class="top">
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
+          <div class="top" id="top-restaurants-list">
           </div>
         </div>
       </section>

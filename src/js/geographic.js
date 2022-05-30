@@ -1,5 +1,6 @@
 import { loadModalContent } from './utils.js';
 import Geolocation from './geolocation.js';
+import RestaurantList from "./restaurantList";
 
 new Promise(async () => {
   await loadModalContent('geographic-modal.html');
@@ -52,5 +53,11 @@ new Promise(async () => {
           .classList.add('btn-disabled');
         document.getElementById('site-modal').classList.add('hide');
       });
+  })
+  .then(() => {
+      const listElement = document.querySelector('#top-restaurants-list');
+      const countryCode = geolocation.getCountryCode();
+      const list = new RestaurantList(listElement);
+      list.getRestaurantsFilteredByLocation(countryCode);
   });
 });

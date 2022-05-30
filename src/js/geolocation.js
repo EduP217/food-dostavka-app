@@ -1,9 +1,4 @@
-import {
-  getCookie,
-  setCookie,
-  setLocalStorage,
-  getLocalStorage,
-} from './utils.js';
+import {getCookie, getLocalStorage, setCookie, setLocalStorage,} from './utils.js';
 
 export default class Geolocation {
   constructor() {
@@ -117,6 +112,13 @@ export default class Geolocation {
     setLocalStorage('currentPositionGeolocation', this.place);
     this.displayPlaceSelected(this.place);
   }
+  getAddressComponentByType(addressComponents, type){
+    return addressComponents.find(r => r.types.includes(type));
+  }
+  getCountryCode() {
+    const addressComponents = getLocalStorage('currentPositionGeolocation').address_components;
+    return this.getAddressComponentByType(addressComponents, 'country').short_name;
+  }
   displayPlaceSelected(place) {
     if (place) {
       document.getElementById('ship-address-selected').value =
@@ -125,7 +127,7 @@ export default class Geolocation {
         place.formatted_address;
       document
         .getElementById('locationInputGroup')
-        .setAttribute('alt', place.formatted_address);
+          .setAttribute('alt', place.formatted_address);
     }
   }
 }

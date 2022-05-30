@@ -1,4 +1,5 @@
 import { loadHeaderFooter } from './utils.js';
+import RestaurantList from './restaurantList';
 
 new Promise(async () => {
   await loadHeaderFooter();
@@ -31,3 +32,7 @@ new Promise(async () => {
       document.getElementById('site-modal').classList.remove('hide');
     });
 });
+
+const listElement = document.querySelector('#top-restaurants-list');
+const list = new RestaurantList(listElement);
+list.init();
