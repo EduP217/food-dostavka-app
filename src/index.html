@@ -1,102 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Dostavka</title>
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/large.css">
-    <link href='https://fonts.googleapis.com/css?family=Koulen' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Koulen"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"></script>
-</head>
-<body>
+    <script async src="js/main.js" type="module" defer></script>
+    <script
+      async
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"
+      defer
+    ></script>
+  </head>
+
+  <body>
     <header id="main-header"></header>
     <main>
-        <section>
-            <img id="pizza1" src="images/pizza.jpg" alt="Pizza and drink">
+      <section class="banner-container">
+        <picture>
+          <source media="(min-width:850px)" srcset="/images/bg-img.png" />
+          <img src="/images/bg-small.jpg" alt="Pizza and drink" id="pizza1" />
+        </picture>
+      </section>
+      <div class="container">
+        <section class="orangeblock">
+          <p>ORDER WHAT YOU NEED IN ONE PLACE</p>
         </section>
-        <section id="orangeblock">
-            <h5>ORDER WHAT YOU NEED IN ONE PLACE</h5>
-            <br>
+        <!-- <h1 id="slogan">IF YOU HAVE FOOD-DOSTAVKA, YOU HAVE EVERYTHING</h1> -->
+        <section class="gotorestaurants">
+          <h1>IF YOU HAVE FOOD-DOSTAVKA, YOU HAVE EVERYTHING</h1>
+          <button class="btn">Go to all restaurants</button>
         </section>
-        <H1 id="slogan">IF YOU HAVE FOOD-DOSTAVKA, YOU HAVE EVERYTHING</H1>
-        <button id="goto">Go to all restaurants</button>
-        <br><br><br><br><br><br>
-        <section id="char">
-            <br>
-            <div class="char">
-            <div >image.png
-                <h3>SAVE TIME!</h3>
-                <P>We run to make your life easier. Follow in your day to day activities that Food-Dostavka bring you everything.</p>
+        <div class="clearfix"></div>
+      </div>
+      <section class="well-content">
+        <div class="container">
+          <section class="comments-grid-container">
+            <div class="comments-item">
+              <img src="/images/icon-bookmark.png" alt="icon bookmark" />
+              <h2>SAVE TIME!</h2>
+              <p>
+                We run to make your life easier. Follow in your day to day
+                activities that Food-Dostavka bring you everything.
+              </p>
             </div>
-            <div>
-                <h3>WE WORK 24 HOURS</h3>
-                <P>24/7 support and wide range of restaurantsand allies with 24hour service.</P>
+            <div class="comments-item">
+              <img src="/images/icon-bookmark.png" alt="icon bookmark" />
+              <h2>WE WORK 24 HOURS</h2>
+              <p>
+                24/7 support and wide range of restaurantsand allies with 24hour
+                service.
+              </p>
             </div>
-            <div>
-                <h3>FIND EVERYTHING!</h3>
-                <P>You no longer have to leave your officeto enjoy the improvement of your city.</P>
+            <div class="comments-item">
+              <img src="/images/icon-bookmark.png" alt="icon bookmark" />
+              <h2>FIND EVERYTHING!</h2>
+              <p>
+                You no longer have to leave your officeto enjoy the improvement
+                of your city.
+              </p>
             </div>
-            </div>
+          </section>
+        </div>
+      </section>
+      <section class="delivery-section well-content">
+        <picture>
+          <source media="(min-width:640px)" srcset="/images/man.jpg" />
+          <img src="images/man-small.jpg" alt="delivery man" id="delivery" />
+        </picture>
+      </section>
+      <section class="top-restaurants">
+        <section class="well-content">
+          <div class="top-restaurants-title container">
+            <h2>TOP RESTAURANTS</h2>
+            <a href="/" class="show-all">Show all restaurants</a>
+          </div>
         </section>
-        <img src="images/man-small.jpg" alt="delivery man" id="delivery">
-
-        <section id="top-restaurants">
-            <br>
-            <h3>TOP RESTAURANTS</h3>
-            <a href="">See all restaurants</a>
-            <br><br><br><br>
-            <div id="top">
-                <section class="restaurantview">
-                    <img src="http://picsum.photos/300/200" alt="placeholder">
-                    <p>Restaurant</p>
-                    <p>30 minutes</p>
-                </section>
-                <section class="restaurantview">
-                    <img src="http://picsum.photos/300/200" alt="placeholder">
-                    <p>Restaurant</p>
-                    <p>30 minutes</p>
-                </section>
-                <section class="restaurantview">
-                    <img src="http://picsum.photos/300/200" alt="placeholder">
-                    <p>Restaurant</p>
-                    <p>30 minutes</p>
-                </section>
-                <section class="restaurantview">
-                    <img src="http://picsum.photos/300/200" alt="placeholder">
-                    <p>Restaurant</p>
-                    <p>30 minutes</p>
-                </section>
-                <section class="restaurantview">
-                    <img src="http://picsum.photos/300/200" alt="placeholder">
-                    <p>Restaurant</p>
-                    <p>30 minutes</p>
-                </section>
-                <button id="showmore">Show more restaurants</button>
+        <div class="container">
+          <div class="top">
+            <div class="restaurantview">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p><b>Restaurant</b></p>
+              <p class="text-danger">30 minutes</p>
             </div>
-        </section>
-        <br><br>
-        <section id="subscribe">
-            <nav>
-                <h3>GET ALL THE NEWS AND DISCOUNTS FROM US</h3>
-                <form>
-                    <input id="email" type="email" placeholder="enter your email here...">
-                    <input id="sendbutton" type="submit" value="Send">
-                </form>
-            </nav>
-            <nav>
-                <img src="images/join-us-img.jpg" alt="people eating" id="join-us-img">
-            </nav>
-        </section>
+            <div class="restaurantview">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p><b>Restaurant</b></p>
+              <p class="text-danger">30 minutes</p>
+            </div>
+            <div class="restaurantview">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p><b>Restaurant</b></p>
+              <p class="text-danger">30 minutes</p>
+            </div>
+            <div class="restaurantview">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p><b>Restaurant</b></p>
+              <p class="text-danger">30 minutes</p>
+            </div>
+            <div class="restaurantview">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p><b>Restaurant</b></p>
+              <p class="text-danger">30 minutes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe-section container">
+        <div class="subscribe">
+          <h3>GET ALL THE NEWS AND DISCOUNTS FROM US</h3>
+          <form id="subscribe-form">
+            <div class="input-group">
+              <input
+                id="email"
+                type="email"
+                placeholder="Introduce your email here..."
+              />
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+        <div class="subscribe-image">
+          <img src="/images/join-us-img.jpg" alt="people eating" />
+        </div>
+      </section>
     </main>
     <footer id="main-footer"></footer>
 
     <!-- The Modal -->
     <div id="site-modal" class="modal hide"></div>
 
-    <script src="js/main.js" type="module" defer></script>
-    <script async src="js/geographic.js" type="module" defer></script>    
-</body>
+    <script async src="js/geographic.js" type="module" defer></script>
+  </body>
 </html>
