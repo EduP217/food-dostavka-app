@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Dostavka</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Koulen"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/small.css" />
-    <link rel="stylesheet" href="/css/medium.css" />
-    <link rel="stylesheet" href="/css/large.css" />
 
-    <script
-      async
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Dostavka</title>
+  <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/small.css" />
+  <link rel="stylesheet" href="/css/medium.css" />
+  <link rel="stylesheet" href="/css/large.css" />
 
-    <template id="cart-item-template">
-        <div class="cart-item">
-            <img src="/images/placeholder.png" alt="cart item image" class="cart-item-image" />
-            <label>1</label>
-            <h3>Placeholder Item Name</h3>
-            <p>This is a short description of the item in the cart</p>
-            <span></span>
-            <button type="button" class="btn btn-icon"><img src="/images/icon-cancel.png" alt="icon cancel" /></button>
+  <script async type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"></script>
+
+  <template id="cart-item-template">
+    <div class="cart-item">
+      <img src="/images/placeholder.png" alt="cart item image" class="cart-item-image" />
+      <label>1</label>
+      <h3>Placeholder Item Name</h3>
+      <p>This is a short description of the item in the cart</p>
+      <span></span>
+      <button type="button" class="btn btn-icon"><img src="/images/icon-cancel.png" alt="icon cancel" /></button>
+    </div>
+  </template>
+</head>
+
+<body>
+  <header id="main-header" class="simple-header"></header>
+  <main>
+    <section>
+      <div class="container">
+        <div class="alert-container"></div>
+      </div>
+    </section>
+    <section id="cart-section">
+      <div class="container">
+        <div class="cart-grid-container">
+          <div>
+            <h2 class="cartTitle">Cart Items</h2>
+            <div id="cart-parent" class="cart"></div>
+          </div>
+          <div class="summary">
+            <h2>Shipment Details</h2>
+            <h4>Delivery Address</h4>
+            <p id="order-delivery-address"></p>
+            <h4>SubTotal</h4>
+            <p id="order-subtotal"></p>
+            <h4>Taxes</h4>
+            <p id="order-taxes"></p>
+            <h4>Total</h4>
+            <p id="order-total"></p>
+            <button id="checkout-button" class="btn btn-accent">Checkout</button>
+          </div>
         </div>
-    </template>
-  </head>
+      </div>
+    </section>
+  </main>
+  <footer id="main-footer"></footer>
 
-  <body>
-    <header id="main-header" class="simple-header"></header>
-    <main>
-        <section id="cart-section">
-            <div class="container">
-                <div class="cart-grid-container">
-                    <div>
-                        <h2 class="cartTitle">Cart Items</h2>
-                        <div id="cart-parent" class="cart"></div>
-                    </div>
-                    <div class="summary">
-                        <h2>Shipment Details</h2>
-                        <h4>Delivery Address</h4>
-                        <p id="order-delivery-address"></p>
-                        <h4>SubTotal</h4>
-                        <p id="order-subtotal"></p>
-                        <h4>Taxes</h4>
-                        <p id="order-taxes"></p>
-                        <h4>Total</h4>
-                        <p id="order-total"></p>
-                        <button id="checkout-button" class="btn btn-accent">Checkout</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer id="main-footer"></footer>
+  <script async src="/js/cart.js" type="module" defer></script>
+</body>
 
-    <script async src="/js/cart.js" type="module" defer></script>
-  </body>
 </html>

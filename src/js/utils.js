@@ -133,3 +133,24 @@ export function getShipmentAmmounts(data){
     "total": total.toFixed(2)
   }
 }
+
+export function insideAlert(parent, title, message, closable){
+  const alert = document.createElement('div');
+  const alertTitle = document.createElement('h3');
+  alertTitle.textContent = title;
+  const alertMessage = document.createElement('p');
+  alertMessage.textContent = message;
+  alert.append(alertTitle);
+  alert.append(alertMessage);
+  if(closable){
+    const close = document.createElement('span');
+    close.classList.add('close');
+    close.addEventListener('click', function (){
+      parent.removeChild(alert);
+    });
+    close.textContent = 'x';
+    alert.append(close);
+  }
+  alert.classList.add('alert')
+  parent.insertBefore(alert, parent.firstChild);
+}

@@ -1,4 +1,4 @@
-import {setLocalStorage,getLocalStorage, renderListWithTemplate, addItemToCart, getShipmentAddressComponents, getShipmentAmmounts} from './utils.js';
+import {setLocalStorage,getLocalStorage, renderListWithTemplate, addItemToCart, getShipmentAddressComponents, getShipmentAmmounts, insideAlert} from './utils.js';
   
 export default class CartCheckout {
     constructor(cartParent, cartKey) {
@@ -29,6 +29,7 @@ export default class CartCheckout {
             ]);
             const cartData = getLocalStorage(this.cartKey);
             console.log(cartData);
+            this.ableDisableCheckout(cartData.length);
             this.renderListCart(cartData);
             this.renderShipmentDetails(cartData);
             res();
@@ -70,9 +71,21 @@ export default class CartCheckout {
         let storeData = getLocalStorage(this.cartKey);
         storeData = storeData.filter(i => {if(i.id != itemId) return i;});
         setLocalStorage(this.cartKey, storeData);
+        this.ableDisableCheckout(storeData.length);
         this.renderShipmentDetails(storeData);
         const itemNode = c.parentNode;
         const rootNode = itemNode.parentNode;
         rootNode.removeChild(itemNode);
+    }
+    ableDisableCheckout(listSize){
+        if(listSize>0){
+            document.getElementById('checkout-button').removeAttribute('disabled');
+            document.getElementById('checkout-button').classList.remove('btn-disabled');
+        } else {
+            document.getElementById('checkout-button').setAttribute('disabled', 'disabled');
+            document.getElementById('checkout-button').classList.add('btn-disabled');
+            const parent = document.querySelector('.alert-container');
+            insideAlert(parent, "Empty Cart", "Your cart is currently empty. To continue with the checkout you must add some products.", true);
+        }
     }
 }
