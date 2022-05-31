@@ -18,8 +18,13 @@ export function convertToText(res) {
   }
 }
 
-export async function loadHeaderFooter() {
-  const headerTemplate = await loadTemplate('../partials/header.html');
+export async function loadHeaderFooter(simpleHeader = false) {
+  let headerTemplate;
+  if(simpleHeader){
+    headerTemplate = await loadTemplate('../partials/header-simple.html');
+  } else {
+    headerTemplate = await loadTemplate('../partials/header.html');
+  }
   const footerTemplate = await loadTemplate('../partials/footer.html');
   const headerElement = document.getElementById('main-header');
   const footerElement = document.getElementById('main-footer');
@@ -32,6 +37,15 @@ export async function loadTemplate(path) {
   const template = document.createElement('template');
   template.innerHTML = html;
   return template;
+}
+
+export function renderListWithTemplate(template, parent, list, callback) {
+  list.forEach((item) => {
+    //console.log(item.id);
+    const clone = template.content.cloneNode(true);
+    const templateWithData = callback(clone, item);
+    parent.appendChild(templateWithData);
+  });
 }
 
 export function renderWithTemplate(template, parent, data, callback) {
@@ -47,6 +61,7 @@ export async function loadModalContent(modalTemplateName) {
   const modalElement = document.getElementById('site-modal');
   renderWithTemplate(modalTemplate, modalElement);
 }
+
 export function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
@@ -68,4 +83,53 @@ export function getCookie(cname) {
     }
   }
   return '';
+}
+
+export function addItemToCart(key, object) {
+
+}
+
+export function getShipmentAddressComponents(){
+  const geolocation = getLocalStorage('currentPositionGeolocation');
+  let shipmentAddress = "";
+  let shipmentCountry = "";
+  let shipmentPostalCode = "";
+  geolocation.address_components.map((a) => {
+    if(a.types.includes('street_number')){
+      shipmentAddress += (a["short_name"] + " ");
+    }
+    if(a.types.includes('route')){
+      shipmentAddress += (a["short_name"] + ", ");
+    }
+    if(a.types.includes('administrative_area_level_1')){
+      shipmentAddress += (a["short_name"] + " ");
+    }
+    if(a.types.includes('country')){
+      shipmentCountry = a["long_name"];
+    }
+    if(a.types.includes('postal_code')){
+      shipmentPostalCode = a["long_name"];
+    }
+  });
+
+  return {
+    "shipmentAddress": shipmentAddress,
+    "shipmentCountry": shipmentCountry,
+    "shipmentPostalCode": shipmentPostalCode
+  }
+}
+
+export function getShipmentAmmounts(data){
+  let subtotal = 0.0;
+  data.map((i) => {
+    let totalUnit = parseInt(i.qty) * parseFloat(i["unit-price"]);
+    subtotal += totalUnit;
+  });
+  let taxes = subtotal*0.18;
+  let total = subtotal+taxes;
+  return {
+    "subtotal": subtotal,
+    "taxes": taxes,
+    "total": total
+  }
 }

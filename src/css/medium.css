@@ -107,4 +107,14 @@
   .login-banner {
     height: 450px;
   }
+
+  /* Cart */
+  .cart-grid-container {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+  }
+  
+  .summary h2{
+    margin-top: 0;
+  }
 }
