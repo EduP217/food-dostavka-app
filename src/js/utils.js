@@ -257,3 +257,10 @@ export function updateBagNumeric(){
   }
   document.getElementById('cartCount').textContent = cartSize;
 }
+
+export function reduceObjByNumber(obj, number) {
+  if (Object.keys(obj).length > number) {
+    obj = Object.fromEntries(Object.entries(obj).filter((item, index) => index < number));
+  }
+  return obj;
+}

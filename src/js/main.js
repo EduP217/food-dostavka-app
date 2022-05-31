@@ -1,5 +1,6 @@
 import { loadHeaderFooter,updateBagNumeric } from './utils.js';
 import { init } from './geographic.js';
+import RestaurantList from './restaurantList';
 
 new Promise(async () => {
   await loadHeaderFooter().then(()=>{
@@ -39,3 +40,7 @@ new Promise(async () => {
     window.location.href = '/views/cart.html';
   });
 });
+
+const listElement = document.querySelector('#top-restaurants-list');
+const list = new RestaurantList(listElement);
+list.init();

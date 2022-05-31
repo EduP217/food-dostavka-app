@@ -15,379 +15,335 @@
         "Price": "$12"
       },
       "Spring Sprout Bibimbap": {
+        "img": "images/json-images/spring-sprout-bibimbap.jpg",
         "description": "soy marinated steelhead trout, seasonal sprouts, candied anchovy, seaweed rice (sea urchin supplement 10)",
         "Price": "$13.25"
       }
     },
-    "keywords": [
-      "Asian",
-      "soup"
-    ],
+    "keywords": ["Asian", "soup"],
     "country": "US"
   },
   "Crown Shy": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/crown-shy.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Millenial Pink": {
+        "img": "images/json-images/millenial-pink.jpg",
         "description": "Strawberry, Ginger, Japanese Plum, Lemon, Soda $",
         "Price": "$3"
       },
       "Pecorrino": {
+        "img": "images/json-images/pecorrino.jpeg",
         "description": "Asparagus, Green Garbanzo, Meyer Lemon, Pecorino $",
         "Price": "$9"
       }
     },
-    "keywords": [
-      "food",
-      "beverage"
-    ],
+    "keywords": ["food", "beverage"],
     "country": "US"
   },
   "Dhamaka": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/dhamaka.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Papdi Chaat ": {
+        "img": "images/json-images/padpi chaat.jpg",
         "description": "spiced crisps, tamarind, yogurt",
         "Price": "$13"
       },
       "Doh Khleh": {
+        "img": "images/json-images/doh-kleh.jpg",
         "description": "pork, lime, cilantro, onion, ginger",
         "Price": "16"
       }
     },
-    "keywords": [
-      "Fast food",
-      "pork",
-      "grill"
-    ],
+    "keywords": ["Fast food", "pork", "grill"],
     "country": "US"
   },
   "Rezdora": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/rezdora.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "carne e uova": {
+        "img": "images/json-images/carne-e-ouva.jpg",
         "description": "Steak and eggs, modenese style with 'insalata di rucola'",
         "Price": "$27"
       },
       "frittata from reggio emilia": {
+        "img": "images/json-images/frittata.jpg",
         "description": "Garden greens, parmigiano abbondante, salad",
         "Price": "$22"
       }
     },
-    "keywords": [
-      "italian",
-      "cheese",
-      "pasta"
-    ],
+    "keywords": ["italian", "cheese", "pasta"],
     "country": "US"
   },
   "Atoboy": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/atoboy.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Lamb*": {
+        "img": "images/json-images/lamb.jpeg",
         "description": "white asparagus, sugar snap peas",
         "Price": "$19"
       },
       "FRIED CHICKEN": {
+        "img": "images/json-images/fried-chicken.jpeg",
         "description": "spicy peanut sauce, gochujang sauce",
         "Price": "$27"
       }
     },
-    "keywords": [
-      "spicy",
-      "salad"
-    ],
+    "keywords": ["spicy", "salad"],
     "country": "US"
   },
   "Gramercy Tavern": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/gramercy tavern.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "ASPARAGUS RISOTTO": {
+        "img": "images/json-images/Asparagus-Risotto.jpg",
         "description": "Rock Shrimp, Meyer Lemon, Black Pepper",
         "Price": "$20"
       },
       "ROASTED DUCK BREAST AND CONFIT": {
+        "img": "images/json-images/roasted-duck-breast.jpg",
         "description": "Green Garlic, Snap Peas, Panisse",
         "Price": "$15"
       }
     },
-    "keywords": [
-      "duck",
-      "shrimp",
-      "risotto"
-    ],
+    "keywords": ["duck", "shrimp", "risotto"],
     "country": "US"
   },
   "Sushi Nakazawa": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/sushi nakazawa.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Japanese Tea": {
+        "img": "images/json-images/japanese-tea.jpg",
         "description": "Pots of Japanese Tea",
         "Price": "$4"
       },
       "Nigiri-sushi exclusive “Omakase”": {
+        "img": "images/json-images/nigiri-sushi.jpg",
         "description": "wenty pieces of Nigiri. Fish and shellfish",
         "Price": "$98"
       }
     },
-    "keywords": [
-      "japanese",
-      "asian",
-      "tea",
-      "sushi"
-    ],
+    "keywords": ["japanese", "asian", "tea", "sushi"],
     "country": "US"
   },
   "Dirt Candy": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/dirt-candy.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "ZUCCHINI TAKOYAKI": {
+        "img": "images/json-images/zucchini-takoyaki.jpg",
         "description": "Served with dehydrated zucchini flakes and raw zucchini curls.",
         "Price": "$16"
       },
       "SPINACH MILLE FEUILLE": {
+        "img": "images/json-images/spinach mille feuille.jpg",
         "description": "Spinach puff pastry layered with super-concentrated spinach mousse, smoked pistachio butter, and a lilac spinach, dehydrated grapefruit, and smoked pistacchio salad.",
         "Price": "$14"
       }
     },
-    "keywords": [
-      "zucchini",
-      "layer",
-      "fast"
-    ],
+    "keywords": ["zucchini", "layer", "fast"],
     "country": "US"
   },
   "Oxomoco": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/oxomoco.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "SKATE TACOS": {
+        "img": "images/json-images/skate-tacos.jpg",
         "description": "GRILLED CABBAGE, MARINATED LEEKS, FENNEL-SHRIMP SALSA",
         "Price": "$23"
       },
       "POLLO A LAS BRAZAS": {
+        "img": "images/json-images/pollo-a-las-brasas.jpg",
         "description": "CHINTESLE, LOCAL HONEY, SALSA PASILLA, CRISPY RED RICE ",
         "Price": "$44"
       }
     },
-    "keywords": [
-      "mexican",
-      "tacos",
-      "grill",
-      "chicken"
-    ],
+    "keywords": ["mexican", "tacos", "grill", "chicken"],
     "country": "US"
   },
   "Gage & Tollner": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/gage-&-tollner.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Classic Shrimp Cocktail": {
+        "img": "images/json-images/classic-shrimp-cocktail.jpeg",
         "description": "Cocktail Sauce shrimp",
         "Price": "$29"
       },
       "T-Bone Sirloin": {
+        "img": "images/json-images/t-bone-sirloin.jpg",
         "description": "T-bone steak with fries ",
         "Price": "$25"
       }
     },
-    "keywords": [
-      "seafood",
-      "meat",
-      "cocktail"
-    ],
+    "keywords": ["seafood", "meat", "cocktail"],
     "country": "US"
   },
   "Rangoon": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/rangoon.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Fish Cake Curry": {
+        "img": "images/json-images/fish-cake-curry.jpg",
         "description": "Burnmese coconut curry sauce, chayote squash, fresh chill",
         "Price": "$28"
       },
       "Coconut Tapioca": {
+        "img": "images/json-images/coconut-tapioca.jpg",
         "description": "Rose syrup, coconut cream, coconut jelly",
         "Price": "$10"
       }
     },
-    "keywords": [
-      "cake",
-      "curry",
-      "tapioca",
-      "fish",
-      "coconut"
-    ],
+    "keywords": ["cake", "curry", "tapioca", "fish", "coconut"],
     "country": "US"
   },
   "Petite Crevette": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/petite-crevette.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Fried Oysters": {
+        "img": "images/json-images/fried-oysters.jpeg",
         "description": "Fresh Deep-Fried Oysters served with a Mixed Green Salad",
         "Price": "$16"
       },
       "Tuna Carpaccio": {
+        "img": "images/json-images/tuna-carpaccio.jpg",
         "description": "Sushi Grade, Thin Sliced Tuna served on a bed of Mixed Green Salad with Olive Oil, Vingarette",
         "Price": "$18"
       }
     },
-    "keywords": [
-      "seafood",
-      "tuna",
-      "sushi",
-      "fried"
-    ],
+    "keywords": ["seafood", "tuna", "sushi", "fried"],
     "country": "US"
   },
   "Carnaval": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/carnaval.jpg",
     "Name": "Name",
     "Adress": "Av. Pardo y Aliaga 662, San Isidro",
     "Menu": {
       "Hamburguesa XC": {
+        "img": "images/json-images/hamburguesa.jpg",
         "description": "Double meat burger and french fries",
         "Price": "$10"
       },
       "Ceviche": {
+        "img": "images/json-images/ceviche.jpg",
         "description": "raw fresh fish or shrimp, marinated and served with plantin dips",
         "Price": "$15"
       }
     },
-    "keywords": [
-      "burguer",
-      "ceviche",
-      "peruvian",
-      "fast food"
-    ],
+    "keywords": ["burguer", "ceviche", "peruvian", "fast food"],
     "country": "PE"
   },
   "Astrid & Gaston": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/astrid&gaston.jpg",
     "Name": "Name",
     "Adress": "Av. Paz Soldán 290, San Isidro, Lima 27",
     "Menu": {
       "Estofado de novillo": {
+        "img": "images/json-images/estofado-de-novillo.jpg",
         "description": "Estofado de novillo cocido lentamente, entomatado con ajo frito y majado de yuca con sobrasada casera",
         "Price": "$16"
       },
       "El fideo lingüini con pato": {
+        "img": "images/json-images/fideo-linguini-con-pato.jpg",
         "description": "Saltados con pechuga de pato y salsa mirasol",
         "Price": "$11"
       }
     },
-    "keywords": [
-      "casserole",
-      "noodles",
-      "duck",
-      "peruvian"
-    ],
+    "keywords": ["casserole", "noodles", "duck", "peruvian"],
     "country": "PE"
   },
   "KJOLLE": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/kjolle.jpg",
     "Name": "Name",
     "Adress": "Av. Pedro de Osma 301, Barranco 15063",
     "Menu": {
       "CORVINA Y OLLUCO": {
+        "img": "images/json-images/corvina-y-olluco.jpg",
         "description": "Limón Rugoso • Lechuga de Mar • Coco",
         "Price": "$9"
       },
       "MASHUA HELADA": {
+        "img": "images/json-images/mashua-helada.jpg",
         "description": "Dessert. Pitahaya • Caña • Arazá",
         "Price": "$11"
       }
     },
-    "keywords": [
-      "seafood",
-      "peruvian",
-      "dessert",
-      "sweet",
-      "coconut"
-    ],
+    "keywords": ["seafood", "peruvian", "dessert", "sweet", "coconut"],
     "country": "PE"
   },
   "Lyubov' Pirogova": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/Lyubov-Pirogova.jpg",
     "Name": "Name",
     "Adress": "Street",
     "Menu": {
       "Пирог Постный с овощами 'карри'": {
+        "img": "images/json-images/Пирог Постный с овощами.jpg",
         "description": "Постный сытный пирог с начинкой из овощей в соусе карри.",
         "Price": "$15"
       },
       "Пирог Печеные томаты с сыром": {
+        "img": "images/json-images/Пирог Печеные томаты с сыром.jpg",
         "description": "Открытый пирог с начинкой из кабачков, сладких перцев, молодого сыра и печеных сладких томатов под",
         "Price": "$20"
       }
     },
-    "keywords": [
-      "russian",
-      "fast food"
-    ],
+    "keywords": ["russian", "fast food"],
     "country": "RU"
   },
   "Cafe Dr. Jhivago": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/Cafe-Dr.-Jhivago.jpg",
     "Name": "Name",
     "Adress": " Mokhovaya St, 15с1, Moscow",
     "Menu": {
       "Pie": {
+        "img": "images/json-images/potato-pie.jpg",
         "description": "Potato pie",
         "Price": "$8.75"
       },
       "Mushroom soup": {
+        "img": "images/json-images/Mushroom-soup.jpg",
         "description": "Porcini mushroom soup with pearl barley",
         "Price": "$19.25"
       }
     },
-    "keywords": [
-      "pie",
-      "potato",
-      "russian",
-      "mushroom",
-      "soup"
-    ],
+    "keywords": ["pie", "potato", "russian", "mushroom", "soup"],
     "country": "RU"
   },
   "Matryoshka Restaurant": {
-    "img": "images/restaurant1.jpg",
+    "img": "images/json-images/Matryoshka-Restaurant.jpg",
     "Name": "Name",
     "Adress": "Kutuzovsky Ave, 2/1, стр.6, Moscow",
     "Menu": {
       "Lamb rack with buckweat": {
+        "img": "images/json-images/Lamb-rack-with-buckweat.jpg",
         "description": "lamb rack with buckweat, roots & soaked-baked apples",
         "Price": "$25"
       },
       "Pozharski chiken rissoles": {
+        "img": "images/json-images/Pozharski-chiken-rissoles.jpg",
         "description": "served with cauliflower puree, poached egg",
         "Price": "$23.5"
       }
     },
-    "keywords": [
-      "lamb",
-      "russian",
-      "salad"
-    ],
+    "keywords": ["lamb", "russian", "salad"],
     "country": "RU"
   }
 }
