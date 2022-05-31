@@ -49,16 +49,6 @@ export default class CartCheckout {
         const template = document.getElementById('cart-item-template');
         renderListWithTemplate(template,this.cartParent,data,this.renderTemplate);
     }
-    removeItem(c) {
-        const itemId = c.getAttribute('data-id');
-        console.log("hello "+ itemId);
-        let storeData = getLocalStorage(this.cartKey);
-        storeData = storeData.filter(i => {if(i.id != itemId) return i;});
-        setLocalStorage(this.cartKey, storeData);
-        const itemNode = c.parentNode;
-        const rootNode = itemNode.parentNode;
-        rootNode.removeChild(itemNode);
-    }
     renderShipmentDetails(data) {
         const shipmentAddressComponenta = getShipmentAddressComponents();
         console.log(shipmentAddressComponenta);
@@ -73,5 +63,16 @@ export default class CartCheckout {
         document.getElementById('order-subtotal').textContent = `$${shipmentAmounts.subtotal}`;
         document.getElementById('order-taxes').textContent = `$${shipmentAmounts.taxes}`;
         document.getElementById('order-total').textContent = `$${shipmentAmounts.total}`;
+    }
+    removeItem(c) {
+        const itemId = c.getAttribute('data-id');
+        console.log("hello "+ itemId);
+        let storeData = getLocalStorage(this.cartKey);
+        storeData = storeData.filter(i => {if(i.id != itemId) return i;});
+        setLocalStorage(this.cartKey, storeData);
+        this.renderShipmentDetails(storeData);
+        const itemNode = c.parentNode;
+        const rootNode = itemNode.parentNode;
+        rootNode.removeChild(itemNode);
     }
 }

@@ -176,4 +176,10 @@
     width: 20px;
     height: 20px;
   }
+
+  /* Cart */
+  .cart-grid-container {
+    grid-template-columns: 1fr .5fr;
+    grid-gap: 2rem;
+  }
 }

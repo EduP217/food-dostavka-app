@@ -128,8 +128,8 @@ export function getShipmentAmmounts(data){
   let taxes = subtotal*0.18;
   let total = subtotal+taxes;
   return {
-    "subtotal": subtotal,
-    "taxes": taxes,
-    "total": total
+    "subtotal": subtotal.toFixed(2),
+    "taxes": taxes.toFixed(2),
+    "total": total.toFixed(2)
   }
 }

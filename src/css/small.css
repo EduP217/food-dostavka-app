@@ -707,18 +707,22 @@ footer {
 }
 
 /* Cart */
+.cartTitle {
+  margin-top: 0;
+}
 .cart-grid-container {
   padding: 1em;
 }
 .cart {
-  margin: 0 1rem;
+  margin: 0;
   margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 .cart-item {
   width: 100%;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: 5em auto 2em 3em;
+  grid-template-columns: 6em auto 2em 3em;
   grid-template-rows: 1fr 1fr auto;
   grid-column-gap: 0.5em;
   margin-bottom: 0.5rem;
@@ -766,8 +770,9 @@ footer {
   border: 0;
 }
 .summary {
-  margin: 0 1rem;
+  margin: 0;
   margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 .summary h4{
   margin-bottom: 0;

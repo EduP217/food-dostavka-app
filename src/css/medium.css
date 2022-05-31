@@ -111,9 +111,10 @@
   /* Cart */
   .cart-grid-container {
     display: grid;
-    grid-template-columns: 1fr .5fr;
+    grid-template-columns: 1fr .6fr;
+    grid-gap: 1rem;
   }
-  
+
   .summary h2{
     margin-top: 0;
   }
