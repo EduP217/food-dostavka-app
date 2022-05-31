@@ -251,5 +251,9 @@ function pad(num, size) {
 
 export function updateBagNumeric(){
   const cart = getLocalStorage('so-cart');
-  document.getElementById('cartCount').textContent = cart.length;
+  let cartSize = 0;
+  if(cart) {
+    cartSize = cart.length;
+  }
+  document.getElementById('cartCount').textContent = cartSize;
 }
