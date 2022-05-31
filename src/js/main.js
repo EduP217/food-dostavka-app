@@ -1,9 +1,10 @@
-import { loadHeaderFooter } from './utils.js';
+import { loadHeaderFooter,updateBagNumeric } from './utils.js';
 import { init } from './geographic.js';
 
 new Promise(async () => {
   await loadHeaderFooter().then(()=>{
     init();
+    updateBagNumeric();
   });
 
   document.getElementById('iconSearch').addEventListener('click', function () {

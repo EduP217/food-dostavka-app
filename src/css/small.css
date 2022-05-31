@@ -179,6 +179,10 @@ header .geolocation-input-group {
   clear: both;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .input-group {
   position: relative;
   display: flex;
@@ -849,4 +853,14 @@ footer {
 
 #checkout-section h2.title {
   padding: 0 1rem;
+}
+
+.checkedout-section {
+  padding: 0 1rem;
+  margin-bottom: 2em;
+}
+.checkedout-section span {
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: underline;
 }

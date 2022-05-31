@@ -136,7 +136,7 @@ export function getShipmentAmmounts(data){
   }
 }
 
-export function insideAlert(parent, title, message, closable){
+export function insideAlert(parent, title, message, closable, scroll = true){
   const alert = document.createElement('div');
   const alertTitle = document.createElement('h3');
   alertTitle.textContent = title;
@@ -154,5 +154,102 @@ export function insideAlert(parent, title, message, closable){
     alert.append(close);
   }
   alert.classList.add('alert')
-  parent.insertBefore(alert, parent.firstChild);
+  parent.prepend(alert);
+  if (scroll) window.scrollTo(0, 0);
+}
+
+export function validateForm(form){
+  let formMap = {};
+  let validateErrors = [];
+  const fields = form.querySelectorAll('input');
+  console.log(fields);
+  fields.forEach(f => {
+    formMap[f.name] = f.value;
+    if (!f.checkValidity()) {
+      validateErrors.push(["Input Failed",`Input ${f.name} validity check failed.`])
+    }
+    if (!f.value) {
+      validateErrors.push(["Input Failed",`Input ${f.name} is empty.`])
+    }
+  });
+  if (!form.checkValidity()) {
+    validateErrors.push(["Form Failed","Form validity check failed."])
+  }
+  return {
+    "map": formMap,
+    "errors": validateErrors
+  };
+}
+
+export function validatePayment(payment){
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Host': 'wallet-test-payment.p.rapidapi.com',
+      'X-RapidAPI-Key': 'e62242969bmsh1e454af0a24e4acp10cf2djsnc0789a5b1f25'
+    },
+    body: JSON.stringify(payment)
+  };
+  
+  return fetch('https://wallet-test-payment.p.rapidapi.com/checkout', options)
+    .then(response => response.json())
+    .then(res => res)
+    .catch(err => {throw err});
+}
+
+export function createOrder(purchaseOrder){
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Host': 'my-store2.p.rapidapi.com',
+      'X-RapidAPI-Key': 'e62242969bmsh1e454af0a24e4acp10cf2djsnc0789a5b1f25'
+    },
+    body: JSON.stringify(purchaseOrder)
+  };
+  
+  return fetch('https://my-store2.p.rapidapi.com/order/new', options)
+    .then(res => res.json())
+    .then(res => res)
+    .catch(err => {throw err});
+}
+
+export function getOrder(purchaseOrderId){
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'my-store2.p.rapidapi.com',
+      'X-RapidAPI-Key': 'e62242969bmsh1e454af0a24e4acp10cf2djsnc0789a5b1f25'
+    }
+  };
+  return fetch(`https://my-store2.p.rapidapi.com/order/${purchaseOrderId}`, options)
+    .then(res => res.json())
+    .then(res => res)
+    .catch(err => {
+      throw err
+    });
+}
+
+export function getParams(param) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const paramValue = urlParams.get(param);
+  return paramValue;
+}
+
+export function formatDate(strDate){
+  const fdate = new Date(strDate);
+  return `${fdate.getFullYear()}-${pad(fdate.getMonth()+1,2)}-${pad(fdate.getDate(),2)} ${pad(fdate.getHours(),2)}:${pad(fdate.getMinutes(),2)}:${pad(fdate.getSeconds(),2)}`;
+}
+
+function pad(num, size) {
+  num = num.toString();
+  while (num.length < size) num = "0" + num;
+  return num;
+}
+
+export function updateBagNumeric(){
+  const cart = getLocalStorage('so-cart');
+  document.getElementById('cartCount').textContent = cart.length;
 }
