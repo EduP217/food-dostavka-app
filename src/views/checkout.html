@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Dostavka</title>
+  <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/small.css" />
+  <link rel="stylesheet" href="/css/medium.css" />
+  <link rel="stylesheet" href="/css/large.css" />
+</head>
+
+<body>
+  <header id="main-header" class="simple-header"></header>
+  <main>
+    <section>
+      <div class="container">
+        <div class="alert-container"></div>
+      </div>
+    </section>
+    <section id="checkout-section">
+        <div class="container">
+            <h2 class="title">Purchase Order</h2>
+            <form action="/" method="POST" id="formCheckout">
+                <div class="checkout-grid-container">
+                    <div class="checkout-contact">
+                        <fieldset>
+                            <legend>Contact</legend>
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Introduce your name" name="name" id="name" class="form-input">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" placeholder="Introduce your lastname" name="lastname" id="lastname" class="form-input">
+                            <label for="phone">Phone</label>
+                            <input type="text" placeholder="Introduce your phone" name="phone" id="phone" class="form-input">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Introduce your email" name="email" id="email" class="form-input">
+                        </fieldset>
+                    </div>
+                    <div class="checkout-shipping">
+                        <fieldset>
+                            <legend>Shipping</legend>
+                            <label for="address">Street Address</label>
+                            <input type="text" placeholder="Introduce your address" name="address" id="address" class="form-input" readonly>
+                            <label for="city">City</label>
+                            <input type="text" placeholder="Introduce your city" name="city" id="city" class="form-input" readonly>
+                            <label for="country">Country</label>
+                            <input type="text" placeholder="Introduce your country" name="country" id="country" class="form-input" readonly>
+                            <label for="pcode">Postal Code</label>
+                            <input type="text" placeholder="Introduce your pcode" name="pcode" id="pcode" class="form-input" readonly>
+                        </fieldset>
+                    </div>
+                    <div class="checkout-payment">
+                        <fieldset>
+                            <legend>Payment</legend>
+                            <label for="cardnumber">Card Number</label>
+                            <input type="text" placeholder="Introduce your card number" name="cardnumber" id="cardnumber" class="form-input">
+                            <label for="cardexpiration">Expiration Date</label>
+                            <input type="text" placeholder="Introduce your card expiration date" name="cardexpiration" id="cardexpiration" class="form-input">
+                            <label for="cardcvv">Security Code</label>
+                            <input type="text" placeholder="Introduce your card security code" name="cardcvv" id="cardcvv" class="form-input">
+                        </fieldset>
+                        <button type="submit" class="btn btn-success">Checkout</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+  </main>
+  <footer id="main-footer"></footer>
+
+  <script async src="/js/checkout.js" type="module" defer></script>
+</body>
+
+</html>

@@ -46,6 +46,10 @@ input {
   padding-left: 0.25rem;
 }
 
+input[readonly] {
+  background-color: whitesmoke;
+}
+
 header {
   display: grid;
   grid-template-columns: 5rem 0 auto auto auto auto;
@@ -246,9 +250,9 @@ button {
   background-color: white;
 }
 
-.btn-ouline:hover,
-.btn-ouline:active,
-.btn-ouline:focus {
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus {
   background-color: whitesmoke;
 }
 
@@ -264,15 +268,15 @@ button {
   color: white;
 }
 
-.btn-success.btn-ouline {
+.btn-success.btn-outline {
   border-color: #73b173;
   color: #73b173;
   background-color: white;
 }
 
-.btn-success.btn-ouline:hover,
-.btn-success.btn-ouline:active,
-.btn-success.btn-ouline:focus {
+.btn-success.btn-outline:hover,
+.btn-success.btn-outline:active,
+.btn-success.btn-outline:focus {
   background-color: #73b173;
   color: white;
 }
@@ -289,15 +293,15 @@ button {
   color: white;
 }
 
-.btn-primary.btn-ouline {
+.btn-primary.btn-outline {
   border-color: var(--primary-color);
   color: var(--primary-color);
   background-color: white;
 }
 
-.btn-primary.btn-ouline:hover,
-.btn-primary.btn-ouline:active,
-.btn-primary.btn-ouline:focus {
+.btn-primary.btn-outline:hover,
+.btn-primary.btn-outline:active,
+.btn-primary.btn-outline:focus {
   background-color: var(--primary-color);
   color: white;
 }
@@ -314,15 +318,15 @@ button {
   color: white;
 }
 
-.btn-accent.btn-ouline {
+.btn-accent.btn-outline {
   border-color: var(--accent2-color);
   color: var(--accent2-color);
   background-color: white;
 }
 
-.btn-accent.btn-ouline:hover,
-.btn-accent.btn-ouline:active,
-.btn-accent.btn-ouline:focus {
+.btn-accent.btn-outline:hover,
+.btn-accent.btn-outline:active,
+.btn-accent.btn-outline:focus {
   background-color: var(--accent2-color);
   color: white;
 }
@@ -806,4 +810,43 @@ footer {
 }
 .alert .close{
   color: black;
+}
+
+/* Checkout */
+.checkout-grid-container {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.checkout-grid-container fieldset {
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 5px 2px lightgray;
+}
+.checkout-grid-container fieldset label {
+  font-weight: bold;
+}
+.checkout-grid-container fieldset input {
+  margin-bottom: 1rem;
+}
+.checkout-grid-container fieldset legend {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+}
+.checkout-contact {
+  margin-bottom: 1rem;
+}
+.checkout-shipping {
+  margin-bottom: 1rem;
+}
+.checkout-payment {
+  margin-bottom: 1rem;
+}
+.checkout-payment button[type="submit"] {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+#checkout-section h2.title {
+  padding: 0 1rem;
 }

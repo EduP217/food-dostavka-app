@@ -58,6 +58,7 @@ export default class CartCheckout {
 
         document.getElementById('order-delivery-address').innerHTML = 
             shipmentAddressComponenta.shipmentAddress + '<br>' +
+            shipmentAddressComponenta.shipmentCity + '<br>' +
             shipmentAddressComponenta.shipmentCountry + '<br>' +
             shipmentAddressComponenta.shipmentPostalCode;
         

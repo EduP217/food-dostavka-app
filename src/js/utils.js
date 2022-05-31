@@ -92,6 +92,7 @@ export function addItemToCart(key, object) {
 export function getShipmentAddressComponents(){
   const geolocation = getLocalStorage('currentPositionGeolocation');
   let shipmentAddress = "";
+  let shipmentCity = "";
   let shipmentCountry = "";
   let shipmentPostalCode = "";
   geolocation.address_components.map((a) => {
@@ -99,10 +100,10 @@ export function getShipmentAddressComponents(){
       shipmentAddress += (a["short_name"] + " ");
     }
     if(a.types.includes('route')){
-      shipmentAddress += (a["short_name"] + ", ");
+      shipmentAddress += a["short_name"];
     }
     if(a.types.includes('administrative_area_level_1')){
-      shipmentAddress += (a["short_name"] + " ");
+      shipmentCity = a["short_name"];
     }
     if(a.types.includes('country')){
       shipmentCountry = a["long_name"];
@@ -114,6 +115,7 @@ export function getShipmentAddressComponents(){
 
   return {
     "shipmentAddress": shipmentAddress,
+    "shipmentCity": shipmentCity,
     "shipmentCountry": shipmentCountry,
     "shipmentPostalCode": shipmentPostalCode
   }

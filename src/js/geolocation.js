@@ -30,7 +30,7 @@ export default class Geolocation {
       this.addressElement,
       {
         componentRestrictions: {
-          country: ['us', 'ca', 'pe'],
+          country: ['us', 'ca', 'pe', 'ru', 'ec'],
         },
         fields: [
           'address_components',

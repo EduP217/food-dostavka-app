@@ -118,4 +118,10 @@
   .summary h2{
     margin-top: 0;
   }
+
+  .checkout-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
 }

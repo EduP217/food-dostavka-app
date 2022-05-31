@@ -182,4 +182,9 @@
     grid-template-columns: 1fr .5fr;
     grid-gap: 2rem;
   }
+
+  .checkout-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
 }

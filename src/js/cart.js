@@ -12,5 +12,8 @@ new Promise(async () => {
         document.querySelectorAll('button[data-id]').forEach((c) => {
             c.addEventListener('click', cartCheckout.removeItem.bind(cartCheckout, c));
         })
+        document.getElementById('checkout-button').addEventListener('click', function (){
+            window.location.href = '/views/checkout.html';
+        });
     });
 });
