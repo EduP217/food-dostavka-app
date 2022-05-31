@@ -66,6 +66,10 @@ header .title-logo {
   line-height: 0.2px;
 }
 
+header .title-logo a{
+  color: inherit;
+}
+
 header .title-logo h1 {
   color: var(--accent3-color);
   font-size: 3em;
