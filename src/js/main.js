@@ -1,7 +1,11 @@
-import { loadHeaderFooter } from './utils.js';
+import { loadHeaderFooter,updateBagNumeric } from './utils.js';
+import { init } from './geographic.js';
 
 new Promise(async () => {
-  await loadHeaderFooter();
+  await loadHeaderFooter().then(()=>{
+    init();
+    updateBagNumeric();
+  });
 
   document.getElementById('iconSearch').addEventListener('click', function () {
     document
@@ -30,4 +34,8 @@ new Promise(async () => {
     .addEventListener('click', function () {
       document.getElementById('site-modal').classList.remove('hide');
     });
+  
+  document.getElementById('cartbutton').addEventListener('click', function (){
+    window.location.href = '/views/cart.html';
+  });
 });
