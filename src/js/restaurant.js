@@ -1,9 +1,14 @@
-import { loadHeaderFooter,updateBagNumeric } from './utils.js';
+import { loadHeaderFooter,updateBagNumeric, getParams } from './utils.js';
 import Geographic from './geographic.js';
 
 await loadHeaderFooter().then(async ()=>{
   await new Geographic().init();
   updateBagNumeric();
+
+  let keywords = getParams('keywords');
+  if(keywords){
+    document.getElementById('searchInputGroup').value = keywords.split(',').join(' ');
+  }
 
   document.getElementById('iconSearch').addEventListener('click', function () {
     document
@@ -35,6 +40,16 @@ await loadHeaderFooter().then(async ()=>{
 
   document.getElementById('cartbutton').addEventListener('click', function (){
     window.location.href = '/views/cart.html';
+  });
+  
+  document.getElementById('searchbutton').addEventListener('click', function (){
+    let keywords = document.getElementById('searchInputGroup').value;
+    if(keywords){
+      keywords = keywords.split(' ').join(',');
+      window.location.href = `/views/restaurants.html?keywords=${keywords}`;
+    } else {
+      window.location.href = '/views/restaurants.html';
+    }
   });
 
 });

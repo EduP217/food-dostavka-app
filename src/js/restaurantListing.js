@@ -17,9 +17,10 @@ export default class RestaurantListing {
             const topRestaurantList = new RestaurantList(topRestaurantsParent,restaurants,shipmentAddressComponents.shipmentCountryCode,true);
             await topRestaurantList.init();
         } else if(restaurantsParent){
+            const keywords = getParams('keywords');
             const shipmentAddressComponents = getShipmentAddressComponents();
             const restaurants = await services.getRestaurants();
-            const restaurantsList = new RestaurantList(restaurantsParent,restaurants,shipmentAddressComponents.shipmentCountryCode,false);
+            const restaurantsList = new RestaurantList(restaurantsParent,restaurants,shipmentAddressComponents.shipmentCountryCode,false,keywords);
             await restaurantsList.init();
             document.getElementById('sorting').addEventListener('change',(e) => {
                 restaurantsList.sortRestaurants(e.target.value);
