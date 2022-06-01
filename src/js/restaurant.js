@@ -1,18 +1,40 @@
-import { getShipmentAddressComponents } from './utils.js';
-import ExternalServices from './ExternalServices.js';
-import RestaurantList from './restaurantList.js';
+import { loadHeaderFooter,updateBagNumeric } from './utils.js';
+import Geographic from './geographic.js';
 
-const services = new ExternalServices();
+await loadHeaderFooter().then(async ()=>{
+  await new Geographic().init();
+  updateBagNumeric();
 
-export default class Restaurant {
-    constructor(){}
-    async init(){
-        const shipmentAddressComponents = getShipmentAddressComponents();
-        const restaurants = await services.getRestaurants();
-        const parent = document.getElementById('top-restaurants-list');
-        if(parent){
-            const restaurantList = new RestaurantList(parent,restaurants,shipmentAddressComponents.shipmentCountryCode,true);
-            await restaurantList.init();
-        }
-    }
-}
+  document.getElementById('iconSearch').addEventListener('click', function () {
+    document
+      .querySelector('header .mobile-input-search')
+      .classList.toggle('hide');
+    document.getElementById('closeSearch').classList.toggle('hide');
+    this.classList.toggle('hide');
+  });
+
+  document.getElementById('closeSearch').addEventListener('click', function () {
+    document
+      .querySelector('header .mobile-input-search')
+      .classList.toggle('hide');
+    document.getElementById('iconSearch').classList.toggle('hide');
+    this.classList.toggle('hide');
+  });
+
+  document
+    .getElementById('iconLocation')
+    .addEventListener('click', function () {
+      document.getElementById('site-modal').classList.remove('hide');
+    });
+
+  document
+    .getElementById('iconLocationGroup')
+    .addEventListener('click', function () {
+      document.getElementById('site-modal').classList.remove('hide');
+    });
+
+  document.getElementById('cartbutton').addEventListener('click', function (){
+    window.location.href = '/views/cart.html';
+  });
+
+});

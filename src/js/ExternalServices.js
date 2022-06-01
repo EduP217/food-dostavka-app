@@ -5,14 +5,18 @@ import {
 export default class ExternalServices {
   constructor() {}
   getRestaurants() {
-    return fetch('https://mocki.io/v1/2e98c371-ebfe-42d1-b3c8-d48f0284d458')
+    return fetch('https://mocki.io/v1/8268b548-6a9c-4c3c-814a-a7828e95df39')
       .then(convertToJson)
       .then(res => res);
   }
   
   async findRestaurantById(id) {
     const restaurants = await this.getRestaurants();
-    const restaurant = restaurants.find((item) => item.Id === id);
+    const restaurant = restaurants.find((item) => item.id === id);
+    await restaurant.menu.map((m)=>{
+      m["restaurant"] = restaurant.name;
+      return m;
+    });
     return restaurant;
   }
 
