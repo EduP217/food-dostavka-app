@@ -912,6 +912,8 @@ footer {
 .restaurant-card {
   background: white;
   text-decoration: none;
+  border-radius: 9px;
+  /*border: 2px solid var(--accent3-color);*/
 }
 
 .restaurant-card:hover {
@@ -923,16 +925,17 @@ footer {
   height: 125px;
   object-fit: cover;
   object-position: center center;
+  border-radius: 9px 9px 0 0;
 }
 
-.rest_name {
+.restaurant-card .restaurant-card__name {
   color: black;
   font-weight: bold;
   padding: 10px 0 7px 15px;
   margin: 0;
 }
 
-.rest_time {
+.restaurant-card .restaurant-card__text {
   color: #EC6C42;
   padding: 0 0 15px 15px;
   margin: 0;

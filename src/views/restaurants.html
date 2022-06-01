@@ -18,8 +18,8 @@
     <template id="restaurant-card-template">
         <a href="/views/restaurant-detail.html" class="restaurant-card">
             <img src="http://picsum.photos/300/200" alt="placeholder" />
-            <p class="rest_name">Restaurant</p>
-            <p class="rest_time">30 minutes</p>
+            <p class="restaurant-card__name">Restaurant</p>
+            <p class="text-danger restaurant-card__text">30 minutes</p>
         </a>
     </template>
 </head>
@@ -29,7 +29,7 @@
     <main>
         <div class="restaurant-container">
             <div class="container">
-                <h1 class="heading_rest">restaurants for you</h1>
+                <h1 class="heading_rest">restaurants near you</h1>
                 <div class="restaurant-filter">
                     <label>Sort by: </label>
                     <select id="sorting" class="form-input">
@@ -38,7 +38,7 @@
                         <option value="sortByTime">delivery time</option>
                     </select>
                 </div>                
-                <div class="restaurant-grid-container">
+                <div class="restaurant-grid-container" id="restaurants-list">
                     <a href="/rest_page.html" class="restaurant-card">
                         <img src="http://picsum.photos/300/200" alt="placeholder" />
                         <p class="rest_name">Restaurant</p>

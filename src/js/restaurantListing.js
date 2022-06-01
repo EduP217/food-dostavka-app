@@ -9,10 +9,14 @@ export default class RestaurantListing {
     async init(){
         const shipmentAddressComponents = getShipmentAddressComponents();
         const restaurants = await services.getRestaurants();
-        const parent = document.getElementById('top-restaurants-list');
-        if(parent){
-            const restaurantList = new RestaurantList(parent,restaurants,shipmentAddressComponents.shipmentCountryCode,true);
-            await restaurantList.init();
+        const topRestaurantsParent = document.getElementById('top-restaurants-list');
+        const restaurantsParent = document.getElementById('restaurants-list');
+        if(topRestaurantsParent){
+            const topRestaurantList = new RestaurantList(topRestaurantsParent,restaurants,shipmentAddressComponents.shipmentCountryCode,true);
+            await topRestaurantList.init();
+        } else if(restaurantsParent){
+            const restaurantsList = new RestaurantList(restaurantsParent,restaurants,shipmentAddressComponents.shipmentCountryCode,false);
+            await restaurantsList.init();
         }
     }
 }

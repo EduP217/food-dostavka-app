@@ -26,7 +26,7 @@ export default class RestaurantList {
     }
     renderList(list) {
         this.parent.innerHTML = '';
-        const template = document.getElementById('product-card-template');
+        const template = document.getElementById('restaurant-card-template');
         renderListWithTemplate(
             template,
             this.parent,
