@@ -923,6 +923,10 @@ footer {
   /*border: 2px solid var(--accent3-color);*/
 }
 
+.restaurantview.restaurant-card {
+  background-color: whitesmoke;
+}
+
 .restaurant-card:hover {
   box-shadow: 0 0 10px 0px #606060;
 }
