@@ -41,8 +41,14 @@ await loadHeaderFooter().then(async ()=>{
     window.location.href = '/views/restaurants.html';
   });
 
-  document.querySelector('.search-input-group .searchbutton').addEventListener('click', function (){
-    window.location.href = '/views/restaurants.html';
+  document.getElementById('searchbutton').addEventListener('click', function (){
+    let keywords = document.getElementById('searchInputGroup').value;
+    if(keywords){
+      keywords = keywords.split(' ').join(',');
+      window.location.href = `/views/restaurants.html?keywords=${keywords}`;
+    } else {
+      window.location.href = '/views/restaurants.html';
+    }
   });
 
 });

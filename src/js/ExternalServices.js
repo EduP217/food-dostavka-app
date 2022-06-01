@@ -20,7 +20,7 @@ export default class ExternalServices {
     return restaurant;
   }
 
-  validatePayment(payment) {
+  async validatePayment(payment) {
     const options = {
       method: 'POST',
       headers: {
@@ -39,7 +39,7 @@ export default class ExternalServices {
       });
   }
 
-  createOrder(purchaseOrder) {
+  async createOrder(purchaseOrder) {
     const options = {
       method: 'POST',
       headers: {
@@ -58,7 +58,7 @@ export default class ExternalServices {
       });
   }
 
-  getOrder(purchaseOrderId) {
+  async getOrder(purchaseOrderId) {
     const options = {
       method: 'GET',
       headers: {

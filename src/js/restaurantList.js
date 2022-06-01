@@ -1,14 +1,18 @@
 import {renderListWithTemplate, sortListByKey} from './utils';
 
 export default class RestaurantList {
-    constructor(parent, restaurants, countryCode, limited) {
+    constructor(parent, restaurants, countryCode, limited, keywords) {
         this.parent = parent;
         this.restaurants = restaurants;
         this.countryCode = countryCode;
         this.limited = limited;
+        this.keywords = keywords;
     }
     async init() {
         this.restaurants = await this.filterRestaurantByCountry(this.countryCode);
+        if(this.keywords){
+            this.restaurants = await this.filterRestaurantByKeyword(this.keywords.split(',').join(' '));
+        }
         this.renderList(this.restaurants);
     }
     async filterRestaurantByCountry(countryCode) {
@@ -16,6 +20,16 @@ export default class RestaurantList {
         if(this.limited){
             restaurantFiltered = restaurantFiltered.slice(0, 5);
         }
+        return restaurantFiltered;
+    }
+    async filterRestaurantByKeyword(keyword){
+        let restaurantFiltered = [];
+        await this.restaurants.map((r) => {
+            console.log(r.keywords);
+            if(r.keywords.includes(keyword)){
+                restaurantFiltered.push(r);
+            }
+        });
         return restaurantFiltered;
     }
     async sortRestaurants(sort){
