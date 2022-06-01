@@ -19,6 +19,17 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"
       defer
     ></script>
+    
+    <!-- HTML template to build a product card -->
+    <template id="product-card-template">
+      <a href="/">
+        <div class="restaurantview restaurant-card">
+          <img src="/images/placeholder.png" alt="placeholder" />
+          <p class="restaurant-card__name">Restaurant</p>
+          <p class="text-danger restaurant-card__text">30 minutes</p>
+        </div>
+      </a>
+    </template>
   </head>
 
   <body>
@@ -74,7 +85,7 @@
       <section class="delivery-section well-content">
         <picture>
           <source media="(min-width:640px)" srcset="/images/man.jpg" />
-          <img src="images/man-small.jpg" alt="delivery man" id="delivery" />
+          <img src="/images/man-small.jpg" alt="delivery man" id="delivery" />
         </picture>
       </section>
       <section class="top-restaurants">
@@ -85,27 +96,7 @@
           </div>
         </section>
         <div class="container">
-          <div class="top">
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
-            <div class="restaurantview">
-              <img src="http://picsum.photos/300/200" alt="placeholder" />
-              <p><b>Restaurant</b></p>
-              <p class="text-danger">30 minutes</p>
-            </div>
+          <div class="top" id="top-restaurants-list">
             <div class="restaurantview">
               <img src="http://picsum.photos/300/200" alt="placeholder" />
               <p><b>Restaurant</b></p>
