@@ -5,7 +5,7 @@ import {
 export default class ExternalServices {
   constructor() {}
   getRestaurants() {
-    return fetch('https://mocki.io/v1/2e98c371-ebfe-42d1-b3c8-d48f0284d458')
+    return fetch('https://mocki.io/v1/8268b548-6a9c-4c3c-814a-a7828e95df39')
       .then(convertToJson)
       .then(res => res);
   }

@@ -222,3 +222,21 @@ export async function convertToJson(res) {
   }
   return jsonResponse;
 }
+
+export function sortListByKey(list, key, asc=true){
+  return list.sort(sort_by(key, asc, (a) =>  a.toUpperCase()));
+}
+
+function sort_by(field, reverse, primer) {
+  const key = primer ?
+    function(x) {
+      return primer(x[field])
+    } :
+    function(x) {
+      return x[field]
+    };
+  reverse = !reverse ? 1 : -1;
+  return function(a, b) {
+    return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+  }
+}

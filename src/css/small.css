@@ -906,7 +906,7 @@ footer {
   padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 }
 
 .restaurant-card {
@@ -931,13 +931,22 @@ footer {
 .restaurant-card .restaurant-card__name {
   color: black;
   font-weight: bold;
-  padding: 10px 0 7px 15px;
+  padding: 0.5rem 1rem;
   margin: 0;
+}
+
+.restaurant-card .restaurant-card__addres {
+  color: black;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: .8em;
+  height: 2rem;
+  overflow: hidden;
 }
 
 .restaurant-card .restaurant-card__text {
   color: #EC6C42;
-  padding: 0 0 15px 15px;
+  padding: 1rem;
   margin: 0;
 }
 

@@ -17,6 +17,9 @@ export default class RestaurantListing {
         } else if(restaurantsParent){
             const restaurantsList = new RestaurantList(restaurantsParent,restaurants,shipmentAddressComponents.shipmentCountryCode,false);
             await restaurantsList.init();
+            document.getElementById('sorting').addEventListener('change',(e) => {
+                restaurantsList.sortRestaurants(e.target.value);
+            });
         }
     }
 }
