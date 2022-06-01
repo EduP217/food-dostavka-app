@@ -132,4 +132,11 @@
   .restaurant-card img {
     height: 150px;
   }
+
+  .menu-card-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .menu-card img {
+    height: 200px;
+  }
 }

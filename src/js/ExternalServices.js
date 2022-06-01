@@ -12,7 +12,11 @@ export default class ExternalServices {
   
   async findRestaurantById(id) {
     const restaurants = await this.getRestaurants();
-    const restaurant = restaurants.find((item) => item.Id === id);
+    const restaurant = restaurants.find((item) => item.id === id);
+    await restaurant.menu.map((m)=>{
+      m["restaurant"] = restaurant.name;
+      return m;
+    });
     return restaurant;
   }
 

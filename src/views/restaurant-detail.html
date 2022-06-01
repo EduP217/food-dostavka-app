@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Dostavka</title>
-    <link rel="stylesheet" href="css/small.css" />
-    <link rel="stylesheet" href="css/large.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Koulen"
-      rel="stylesheet"
-    />
 
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,500&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Dostavka</title>
+  <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/small.css" />
+  <link rel="stylesheet" href="/css/medium.css" />
+  <link rel="stylesheet" href="/css/large.css" />
 
-  <body>
-    <header id="main-header"></header>
+  <script async type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGWLXAXPQjiZfbfJGw_3fPl32D2yPsStU&libraries=places" defer>
+  </script>
 
-    <main></main>
+  <template id="menu-card-template">
+    <div class="menu-card">
+      <img src="/images/placeholder.png" alt="placeholder" />
+      <p class="menu-title"></p>
+      <p class="menu-description"></p>
+      <p class="menu-price"></p>
+      <button type="button">ADD</button>
+    </div>
+  </template>
+</head>
 
-    <footer id="main-footer"></footer>
+<body>
+  <header id="main-header"></header>
+  <main>
+    <div class="container">
+      <div class="restaurant-menu-container">
+        <h1 id="restaurantTitle">Restaurant Name</h1>
+        <div class="restaurant-menu-grid-container">
+          <div class="restaurant-info">
+            <img src="http://picsum.photos/300/200" alt="placeholder" id="restaurant-info-img" />
+            <p class="restaurant-address"></p>
+            <p class="restaurant-time">30 min.</p>
+          </div>
+          <div class="menu-card-list" id="menu-card-list">
+            <div class="menu-card">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p class="menu-title"></p>
+              <p class="menu-description"></p>
+              <p class="menu-price"></p>
+              <button type="button">ADD</button>
+            </div>
+            <div class="menu-card">
+              <img src="http://picsum.photos/300/200" alt="placeholder" />
+              <p class="menu-title"></p>
+              <p class="menu-description"></p>
+              <p class="menu-price"></p>
+              <button type="button">ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="main-footer"></footer>
 
-    <!-- The Modal -->
-    <div id="site-modal" class="modal hide"></div>
+  <!-- The Modal -->
+  <div id="site-modal" class="modal hide"></div>
+  <div id="alert-modal" class="modal hide">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <div class="alert-modal-content">
+          <h2 class="text-center">Completed Succesfully</h2>
+          <img src="/images/check.gif" alt="check" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script async src="/js/restaurant.js" type="module" defer></script>
+  <script type="text/javascript">
+    document.querySelector('#alert-modal .close').addEventListener('click', function () {
+      document.getElementById('alert-modal').classList.add('hide');
+    });
+  </script>
+</body>
 
-    <script src="js/main.js" type="module" defer></script>
-    <script async src="js/geographic.js" type="module" defer></script>
-  </body>
 </html>

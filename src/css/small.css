@@ -721,6 +721,13 @@ footer {
   }
 }
 
+.alert-modal-content img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center center;
+}
+
 /* Cart */
 .cartTitle {
   margin-top: 0;
@@ -954,4 +961,85 @@ footer {
   display: block;
   margin: 50px auto;
   transform: none;
+}
+
+/* RESTAURANT DETAILS */
+.restaurant-menu-container {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.restaurant-info {
+  border: 1px solid black;
+  background-color: var(--accent-color);
+}
+
+.restaurant-info img{
+  display: none;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.restaurant-info .restaurant-address {
+  color: black;
+  margin: 0;
+  padding: 1rem;
+  padding-bottom: 0;
+  font-weight: bold;
+}
+
+.restaurant-info .restaurant-time {
+  color: #EC6C42;
+  padding: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.menu-card-list {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.menu-card {
+  border: 1px solid black;
+  text-align: center;
+}
+.menu-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.menu-card .menu-title {
+  text-align: left;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0;
+  padding-bottom: 0;
+  color: var(--accent3-color);
+}
+.menu-card .menu-description {
+  text-align: left;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  height: 2em;
+  overflow: hidden;
+}
+.menu-card .menu-price {
+  text-align: left;  
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+.menu-card button{
+  background-color: var(--accent2-color);
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 9px;
+  width: 80%;
+  margin: 1em 0;
 }

@@ -8,7 +8,7 @@ export default class Geographic {
   async init() {
     await loadModalContent('geographic-modal.html');
 
-    document.querySelector('.close').addEventListener('click', function () {
+    document.querySelector('#site-modal .close').addEventListener('click', function () {
       document.getElementById('site-modal').classList.add('hide');
     });
 
