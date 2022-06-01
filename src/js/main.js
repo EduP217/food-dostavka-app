@@ -37,4 +37,12 @@ await loadHeaderFooter().then(async ()=>{
     window.location.href = '/views/cart.html';
   });
 
+  document.getElementById('gotoRestaurants').addEventListener('click', function () {
+    window.location.href = '/';
+  });
+
+  document.querySelector('.search-input-group .searchbutton').addEventListener('click', function (){
+    window.location.href = '/';
+  });
+
 });
