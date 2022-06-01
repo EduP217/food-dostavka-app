@@ -644,6 +644,7 @@ footer {
 }
 
 /* Modal */
+
 .modal {
   position: fixed;
   z-index: 1;
