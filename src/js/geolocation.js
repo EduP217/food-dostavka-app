@@ -4,6 +4,7 @@ import {
   setLocalStorage,
   getLocalStorage,
 } from './utils.js';
+import Restaurant from './restaurant.js';
 
 export default class Geolocation {
   constructor() {
@@ -11,19 +12,19 @@ export default class Geolocation {
     this.autocomplete;
     this.place;
   }
-  init() {
-    return new Promise((res, rej) => {
-      this.initMap();
-      res();
-    });
+  async init() {
+    await this.initMap();
   }
   initMap() {
     this.addressElement = document.querySelector('#ship-address');
-    google.maps.event.addDomListener(
-      window,
-      'load',
-      this.initialize.bind(this)
-    );
+    return new Promise((res) => {
+      google.maps.event.addDomListener(
+        window,
+        'load',
+        this.initialize.bind(this)
+      );
+      res();
+    })
   }
   async initialize() {
     this.autocomplete = new google.maps.places.Autocomplete(
@@ -77,6 +78,8 @@ export default class Geolocation {
         })
         .finally(() => {
           document.getElementById('site-modal').classList.remove('hide');
+          this.place = getLocalStorage('currentPositionGeolocation');
+          this.displayPlaceSelected(this.place);
         });
     }
     this.place = getLocalStorage('currentPositionGeolocation');
@@ -126,6 +129,7 @@ export default class Geolocation {
       document
         .getElementById('locationInputGroup')
         .setAttribute('alt', place.formatted_address);
+      new Restaurant().init();
     }
   }
 }

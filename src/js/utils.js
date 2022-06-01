@@ -40,6 +40,7 @@ export async function loadTemplate(path) {
 }
 
 export function renderListWithTemplate(template, parent, list, callback) {
+  console.log(list);
   list.forEach((item) => {
     //console.log(item.id);
     const clone = template.content.cloneNode(true);
@@ -89,11 +90,14 @@ export function addItemToCart(key, object) {
 
 }
 
-export function getShipmentAddressComponents(){
-  const geolocation = getLocalStorage('currentPositionGeolocation');
+export function getShipmentAddressComponents(geolocation){
+  if(!geolocation){
+    geolocation = getLocalStorage('currentPositionGeolocation');
+  }
   let shipmentAddress = "";
   let shipmentCity = "";
   let shipmentCountry = "";
+  let shipmentCountryCode = "";
   let shipmentPostalCode = "";
   geolocation.address_components.map((a) => {
     if(a.types.includes('street_number')){
@@ -107,6 +111,7 @@ export function getShipmentAddressComponents(){
     }
     if(a.types.includes('country')){
       shipmentCountry = a["long_name"];
+      shipmentCountryCode = a["short_name"];
     }
     if(a.types.includes('postal_code')){
       shipmentPostalCode = a["long_name"];
@@ -117,6 +122,7 @@ export function getShipmentAddressComponents(){
     "shipmentAddress": shipmentAddress,
     "shipmentCity": shipmentCity,
     "shipmentCountry": shipmentCountry,
+    "shipmentCountryCode": shipmentCountryCode,
     "shipmentPostalCode": shipmentPostalCode
   }
 }
@@ -181,56 +187,6 @@ export function validateForm(form){
   };
 }
 
-export function validatePayment(payment){
-  const options = {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      'X-RapidAPI-Host': 'wallet-test-payment.p.rapidapi.com',
-      'X-RapidAPI-Key': 'e62242969bmsh1e454af0a24e4acp10cf2djsnc0789a5b1f25'
-    },
-    body: JSON.stringify(payment)
-  };
-  
-  return fetch('https://wallet-test-payment.p.rapidapi.com/checkout', options)
-    .then(response => response.json())
-    .then(res => res)
-    .catch(err => {throw err});
-}
-
-export function createOrder(purchaseOrder){
-  const options = {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      'X-RapidAPI-Host': 'my-store2.p.rapidapi.com',
-      'X-RapidAPI-Key': 'e62242969bmsh1e454af0a24e4acp10cf2djsnc0789a5b1f25'
-    },
-    body: JSON.stringify(purchaseOrder)
-  };
-  
-  return fetch('https://my-store2.p.rapidapi.com/order/new', options)
-    .then(res => res.json())
-    .then(res => res)
-    .catch(err => {throw err});
-}
-
-export function getOrder(purchaseOrderId){
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Host': 'my-store2.p.rapidapi.com',
-      'X-RapidAPI-Key': 'e62242969bmsh1e454af0a24e4acp10cf2djsnc0789a5b1f25'
-    }
-  };
-  return fetch(`https://my-store2.p.rapidapi.com/order/${purchaseOrderId}`, options)
-    .then(res => res.json())
-    .then(res => res)
-    .catch(err => {
-      throw err
-    });
-}
-
 export function getParams(param) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -256,4 +212,13 @@ export function updateBagNumeric(){
     cartSize = cart.length;
   }
   document.getElementById('cartCount').textContent = cartSize;
+}
+
+export async function convertToJson(res) {
+  const jsonResponse = await res.json();
+  console.log(jsonResponse);
+  if (res.status == 400) {
+    throw { name: 'servicesError', message: jsonResponse };
+  }
+  return jsonResponse;
 }
