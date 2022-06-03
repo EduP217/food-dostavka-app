@@ -93,20 +93,23 @@ export function getCookie(cname) {
 export async function addItemToCart(item) {
   console.log("add item to cart");
   console.log(item);
-  let cartItems = [];
-  if (validateKeyInLocalStorage('so-cart')) {
-    cartItems = getLocalStorage('so-cart');
-  }
+  let cartItems = getLocalStorage('so-cart');
+  console.log(cartItems);
   let itemUpdated = false;
-  if(cartItems.length > 0){
-    await cartItems.map((i) => {
-      if(i.id == item.id){
-        i.qty=parseInt(i.qty)+1;
-        itemUpdated = true;
-      }
-      return i;
-    });
+  if(cartItems){
+    if(cartItems.length > 0){
+      await cartItems.map((i) => {
+        if(i.id == item.id){
+          i.qty=parseInt(i.qty)+1;
+          itemUpdated = true;
+        }
+        return i;
+      });
+    }
+  } else {
+    cartItems = [];
   }
+  
   if(!itemUpdated){
     item['qty'] = 1;
     cartItems.push(item);
