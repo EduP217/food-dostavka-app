@@ -220,4 +220,8 @@
   .menu-card img {
     height: 250px;
   }
+
+  .alert-modal-content img {
+    height: 200px;
+  }
 }

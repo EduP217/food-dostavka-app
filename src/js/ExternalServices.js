@@ -73,4 +73,10 @@ export default class ExternalServices {
         throw err
       });
   }
+
+  getOrders() {
+    return fetch('https://mocki.io/v1/7f690464-8a48-4e0a-8b6b-1abe1e5a3988')
+      .then(convertToJson)
+      .then(res => res);
+  }
 }
