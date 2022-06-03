@@ -77,7 +77,7 @@
             </button>
 
             <div id='id01' class='modal hide'>
-              <form class='modal-content animate' method="POST">
+              <form id="formSignIn" class='modal-content animate' method="POST">
                 <div class="imgcontainer">
                   <span id="timesModal" class="close" title="Close Modal">&times;</span>
                 </div>
@@ -88,6 +88,7 @@
                     type="text"
                     placeholder='Enter Username here'
                     name='uname'
+                    id="uname"
                     required
                   />
 
@@ -106,7 +107,7 @@
                     required
                   /> -->
 
-                  <button type='submit' class="float-right"><a href="../views/history.html">Sign in </a></button>
+                  <button type='submit' class="float-right">Sign in</button>
                   <button
                     type='button'
                     id="closeModal"

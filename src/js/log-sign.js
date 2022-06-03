@@ -10,3 +10,9 @@ document.getElementById('timesModal').addEventListener('click',function(event) {
 document.getElementById('closeModal').addEventListener('click',function(event) {
     modal.classList.add('hide');
 });
+
+document.getElementById('formSignIn').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = e.target.querySelector('#uname').value;
+    window.location.href = '/views/history.html?user='+username;
+});
