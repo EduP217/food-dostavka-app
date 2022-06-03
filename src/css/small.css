@@ -1049,11 +1049,15 @@ footer {
 }
 
 /* log in */
-input {
-  width: 90%;
-  padding: 10px 20px;
+.float-left {
+  float: left;
 }
-button {
+
+.float-right {
+  float: right;
+}
+
+.loginmain button {
   background-color: #ed9542;
   color: white;
   padding: 1em 2em;
@@ -1061,14 +1065,27 @@ button {
   cursor: pointer;
 
 }
-
-button:hover {
+.loginmain button:hover {
   background-color: #ec6c41;
 }
-.cancelbtn {
-  padding: 0.5em 0.5em;
+
+#id01 {
+  text-align: left;
+}
+#id01 input {
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+#id01 button {
+  margin-top: 1em;
+}
+#id01 .cancelbtn {
   background-color: #004e64;
 }
-.container {
+#id01 .container {
   padding: 16px;
 }

@@ -71,19 +71,15 @@
             <!-- <div class="login-options">
               <button id="WA" class="btn btn-disabled">Sign In</button>
             </div> -->
-            <p>Don't have an account yet?</p>
-            <button
-              onclick='document.getElementById("id01").style.display="block"'
-              style='width: auto'
-            >
-              Sign up
+            <!-- <p>Don't have an account yet?</p> -->
+            <button id="openSignUpModal" style='width: auto'>
+              Sign in
             </button>
 
-            <div id='id01' class='modal'>
+            <div id='id01' class='modal hide'>
               <form class='modal-content animate' method="POST">
                 <div class="imgcontainer">
-                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          
+                  <span id="timesModal" class="close" title="Close Modal">&times;</span>
                 </div>
 
                 <div class="container">
@@ -102,24 +98,29 @@
                     name='psw'
                     required
                   />
-                  <label><b>Email</b></label>
+                  <!-- <label><b>Email</b></label>
                   <input
                     type='email'
                     placeholder='Enter your email here'
                     name='mail'
                     required
-                  />
+                  /> -->
 
-                  <button type='submit'> <a href="../views/history.html">Sign up </a></button>
-                  
-                </div>
-
-                <div class='container' style='background-color: #f1f1f1'>
+                  <button type='submit' class="float-right"><a href="../views/history.html">Sign in </a></button>
                   <button
                     type='button'
-                    onclick='document.getElementById("id01").style.display="none"'
-                    class='cancelbtn'> Cancel </button>
+                    id="closeModal"
+                    class='cancelbtn float-left'> Cancel </button>
+
+                    <div class="clearfix"></div>
                 </div>
+
+                <!-- <div class='container' style='background-color: #f1f1f1'>
+                  <button
+                    type='button'
+                    id="closeModal"
+                    class='cancelbtn'> Cancel </button>
+                </div> -->
               </form>
             </div>
           </section>

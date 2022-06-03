@@ -1,6 +1,12 @@
 var modal = document.getElementById('id01');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
+document.getElementById('openSignUpModal').addEventListener('click',function(event) {
+    modal.classList.remove('hide');
+});
+
+document.getElementById('timesModal').addEventListener('click',function(event) {
+    modal.classList.add('hide');
+});
+
+document.getElementById('closeModal').addEventListener('click',function(event) {
+    modal.classList.add('hide');
+});
