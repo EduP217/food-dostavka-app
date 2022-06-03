@@ -21,8 +21,8 @@
     ></script>
     
     <!-- HTML template to build a product card -->
-    <template id="product-card-template">
-      <a href="/">
+    <template id="restaurant-card-template">
+      <a href="/views/restaurant-detail.html">
         <div class="restaurantview restaurant-card">
           <img src="/images/placeholder.png" alt="placeholder" />
           <p class="restaurant-card__name">Restaurant</p>
@@ -48,7 +48,7 @@
         <!-- <h1 id="slogan">IF YOU HAVE FOOD-DOSTAVKA, YOU HAVE EVERYTHING</h1> -->
         <section class="gotorestaurants">
           <h1>IF YOU HAVE FOOD-DOSTAVKA, YOU HAVE EVERYTHING</h1>
-          <button class="btn">Go to all restaurants</button>
+          <button class="btn" id="gotoRestaurants">Go to all restaurants</button>
         </section>
         <div class="clearfix"></div>
       </div>
@@ -92,7 +92,7 @@
         <section class="well-content">
           <div class="top-restaurants-title container">
             <h2>TOP RESTAURANTS</h2>
-            <a href="/" class="show-all">Show all restaurants</a>
+            <a href="/views/restaurants.html" class="show-all">Show all restaurants</a>
           </div>
         </section>
         <div class="container">

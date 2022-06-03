@@ -7,26 +7,26 @@ export default class CartCheckout {
     }
     init() {
         return new Promise(async (res) => {
-            setLocalStorage(this.cartKey, [
-                {
-                    "id": "PE-001",
-                "name": "Estofado de novillo",
-                "description": "Estofado de novillo cocido lentamente, entomatado con ajo frito y majado de yuca con sobrasada casera",
-                "unit-price": 16.00,
-                "qty": 2,
-                "image": "/images/restaurant1.jpg",
-                "restaurant": "Astrid & Gaston"
-                },
-                {
-                    "id": "PE-002",
-                "name": "CORVINA Y OLLUCO",
-                "description": "Limón Rugoso • Lechuga de Mar • Coco",
-                "unit-price": 9.00,
-                "qty": 1,
-                "image": "/images/restaurant2.jpg",
-                "restaurant": "KJOLLE"
-                }
-            ]);
+            // setLocalStorage(this.cartKey, [
+            //     {
+            //         "id": "PE-001",
+            //     "name": "Estofado de novillo",
+            //     "description": "Estofado de novillo cocido lentamente, entomatado con ajo frito y majado de yuca con sobrasada casera",
+            //     "unit-price": 16.00,
+            //     "qty": 2,
+            //     "image": "/images/restaurant1.jpg",
+            //     "restaurant": "Astrid & Gaston"
+            //     },
+            //     {
+            //         "id": "PE-002",
+            //     "name": "CORVINA Y OLLUCO",
+            //     "description": "Limón Rugoso • Lechuga de Mar • Coco",
+            //     "unit-price": 9.00,
+            //     "qty": 1,
+            //     "image": "/images/restaurant2.jpg",
+            //     "restaurant": "KJOLLE"
+            //     }
+            // ]);
             const cartData = getLocalStorage(this.cartKey);
             console.log(cartData);
             this.ableDisableCheckout(cartData.length);
@@ -36,12 +36,12 @@ export default class CartCheckout {
         });
     }
     renderTemplate(template, item) {
-        template.querySelector('img').src = item.image;
+        template.querySelector('img').src = item.img;
         template.querySelector('img').alt = item.name;
         template.querySelector('label').textContent = item.qty;
         template.querySelector('h3').textContent = item.name;
         template.querySelector('p').textContent = item.description;
-        template.querySelector('span').innerHTML = `<b>Unit Price:</b> $${parseFloat(item['unit-price'])}`;
+        template.querySelector('span').innerHTML = `<b>Unit Price:</b> $${parseFloat(item['price']).toFixed(2)}`;
         template.querySelector('button').setAttribute('data-id', item.id);
         return template;
     }

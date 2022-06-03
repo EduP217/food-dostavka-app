@@ -3,10 +3,11 @@ import {
     getShipmentAddressComponents,
     insideAlert,
     validateForm,
-    removeLocalStorage,
-    validatePayment,
-    createOrder
+    removeLocalStorage
 } from './utils.js';
+import ExternalServices from './ExternalServices.js';
+
+const services = new ExternalServices();
 
 new Promise(async () => {
     await loadHeaderFooter(true).then(()=>{
@@ -37,13 +38,13 @@ new Promise(async () => {
                     "address": validation.map.address + ", " + validation.map.city + ", " + validation.map.country
                 }
 
-                const paymentServiceResp = await validatePayment();
+                const paymentServiceResp = await services.validatePayment();
                 console.log(paymentServiceResp);
 
                 let paymentValid = (paymentServiceResp && paymentServiceResp.transactionId);
                 if(paymentValid){
                     newOrder["transactionId"] = paymentServiceResp.transactionId;
-                    const orderServiceResp = await createOrder(newOrder);
+                    const orderServiceResp = await services.createOrder(newOrder);
                     console.log(orderServiceResp);
                     removeLocalStorage('so-cart');
                     window.location.assign(`/views/checkedout.html?orderId=${orderServiceResp.id}`);

@@ -10,6 +10,10 @@ export function removeLocalStorage(key) {
   localStorage.removeItem(key);
 }
 
+export function validateKeyInLocalStorage(key) {
+  return localStorage.key(key);
+}
+
 export function convertToText(res) {
   if (res.ok) {
     return res.text();
@@ -86,8 +90,33 @@ export function getCookie(cname) {
   return '';
 }
 
-export function addItemToCart(key, object) {
-
+export async function addItemToCart(item) {
+  console.log("add item to cart");
+  console.log(item);
+  let cartItems = getLocalStorage('so-cart');
+  console.log(cartItems);
+  let itemUpdated = false;
+  if(cartItems){
+    if(cartItems.length > 0){
+      await cartItems.map((i) => {
+        if(i.id == item.id){
+          i.qty=parseInt(i.qty)+1;
+          itemUpdated = true;
+        }
+        return i;
+      });
+    }
+  } else {
+    cartItems = [];
+  }
+  
+  if(!itemUpdated){
+    item['qty'] = 1;
+    cartItems.push(item);
+  }
+  setLocalStorage('so-cart', cartItems);
+  updateBagNumeric();
+  document.getElementById('alert-modal').classList.remove('hide');
 }
 
 export function getShipmentAddressComponents(geolocation){
@@ -130,7 +159,7 @@ export function getShipmentAddressComponents(geolocation){
 export function getShipmentAmmounts(data){
   let subtotal = 0.0;
   data.map((i) => {
-    let totalUnit = parseInt(i.qty) * parseFloat(i["unit-price"]);
+    let totalUnit = parseInt(i.qty) * parseFloat(i["price"]);
     subtotal += totalUnit;
   });
   let taxes = subtotal*0.18;
@@ -205,11 +234,13 @@ function pad(num, size) {
   return num;
 }
 
-export function updateBagNumeric(){
+export async function updateBagNumeric(){
   const cart = getLocalStorage('so-cart');
   let cartSize = 0;
   if(cart) {
-    cartSize = cart.length;
+    await cart.map((c) => {
+      cartSize+=parseInt(c.qty);
+    })
   }
   document.getElementById('cartCount').textContent = cartSize;
 }
@@ -221,4 +252,22 @@ export async function convertToJson(res) {
     throw { name: 'servicesError', message: jsonResponse };
   }
   return jsonResponse;
+}
+
+export function sortListByKey(list, key, asc=true){
+  return list.sort(sort_by(key, asc, (a) =>  a.toUpperCase()));
+}
+
+function sort_by(field, reverse, primer) {
+  const key = primer ?
+    function(x) {
+      return primer(x[field])
+    } :
+    function(x) {
+      return x[field]
+    };
+  reverse = !reverse ? 1 : -1;
+  return function(a, b) {
+    return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+  }
 }

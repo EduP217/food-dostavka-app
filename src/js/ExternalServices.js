@@ -5,18 +5,22 @@ import {
 export default class ExternalServices {
   constructor() {}
   getRestaurants() {
-    return fetch('https://mocki.io/v1/2e98c371-ebfe-42d1-b3c8-d48f0284d458')
+    return fetch('https://mocki.io/v1/8268b548-6a9c-4c3c-814a-a7828e95df39')
       .then(convertToJson)
       .then(res => res);
   }
   
   async findRestaurantById(id) {
     const restaurants = await this.getRestaurants();
-    const restaurant = restaurants.find((item) => item.Id === id);
+    const restaurant = restaurants.find((item) => item.id === id);
+    await restaurant.menu.map((m)=>{
+      m["restaurant"] = restaurant.name;
+      return m;
+    });
     return restaurant;
   }
 
-  validatePayment(payment) {
+  async validatePayment(payment) {
     const options = {
       method: 'POST',
       headers: {
@@ -35,7 +39,7 @@ export default class ExternalServices {
       });
   }
 
-  createOrder(purchaseOrder) {
+  async createOrder(purchaseOrder) {
     const options = {
       method: 'POST',
       headers: {
@@ -54,7 +58,7 @@ export default class ExternalServices {
       });
   }
 
-  getOrder(purchaseOrderId) {
+  async getOrder(purchaseOrderId) {
     const options = {
       method: 'GET',
       headers: {
@@ -68,5 +72,11 @@ export default class ExternalServices {
       .catch(err => {
         throw err
       });
+  }
+
+  getOrders() {
+    return fetch('https://mocki.io/v1/7f690464-8a48-4e0a-8b6b-1abe1e5a3988')
+      .then(convertToJson)
+      .then(res => res);
   }
 }

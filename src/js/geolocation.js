@@ -4,7 +4,7 @@ import {
   setLocalStorage,
   getLocalStorage,
 } from './utils.js';
-import Restaurant from './restaurant.js';
+import RestaurantListing from './restaurantListing.js';
 
 export default class Geolocation {
   constructor() {
@@ -129,7 +129,7 @@ export default class Geolocation {
       document
         .getElementById('locationInputGroup')
         .setAttribute('alt', place.formatted_address);
-      new Restaurant().init();
+      new RestaurantListing().init();
     }
   }
 }

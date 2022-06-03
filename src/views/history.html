@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History orders Food Dostavka</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Koulen"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/small.css" />
+    <link rel="stylesheet" href="/css/medium.css" />
+    <link rel="stylesheet" href="/css/large.css" />
+    <script src="/js/history.js" type="module" defer></script>
+
+    <template id="panel-item-template">
+      <div class="panel-item">
+        <img src="/images/placeholder.png" alt="placeholder">
+        <h3>Foodname</h3>
+        <p class="description">
+          Description
+        </p>
+        <p class="info">
+          <span>Restaurant: <span class="restaurant">qty</span></span>
+          <span>Quantity: <span class="qty">qty</span></span>
+          <span>Price: $<span class="price">qty</span></span>
+        </p>
+      </div>
+    </template>
+  </head>
+  <body>
+    <header class="display-block">
+        <div class="container">
+          <section class="title-logo">
+            <a href="/">
+            <h1>FOOD</h1>
+            <h5>DOSTAVKA</h5>
+          </a>
+          </section>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="history-container">
+            <h1>
+              <span id="username">Username</span> Orders
+            </h1>
+            <div id="historyOrdersPanels">
+              <div class="panel">
+                <h2>Order - OrderDate</h2>
+                <div class="panel-item">
+                  <img src="/images/placeholder.png" alt="placeholder">
+                  <h3>Foodname</h3>
+                  <p class="description">
+                    Description
+                  </p>
+                  <p class="info">
+                    restaurant: <span class="restaurant">qty</span><br>
+                    qty: <span class="qty">qty</span><br>
+                    price: <span class="price">qty</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer id="main-footer"></footer>
+  </body>
+
+</html>
