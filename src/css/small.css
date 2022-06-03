@@ -866,3 +866,27 @@ footer {
   text-transform: capitalize;
   text-decoration: underline;
 }
+/* log in */
+input {
+  width: 90%;
+  padding: 10px 20px;
+}
+button {
+  background-color: #ed9542;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  cursor: pointer;
+
+}
+
+button:hover {
+  background-color: #ec6c41;
+}
+.cancelbtn {
+  padding: 0.5em 0.5em;
+  background-color: #004e64;
+}
+.container {
+  padding: 16px;
+}

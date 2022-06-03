@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/medium.css" />
     <link rel="stylesheet" href="/css/large.css" />
     <script src="/js/login.js" defer></script>
+    <script src="../js/log-sign.js" defer></script>
   </head>
 
   <body>
@@ -53,7 +54,7 @@
             <div class="divisor">
               <span class="divisor-label">Or</span>
             </div>
-            <form action="/" method="POST" id="formlogin">
+            <!-- <form action="/" method="POST" id="formlogin">
               <div class="input-group">
                 <select name="code" id="code" class="form-input">
                   <option>--</option>
@@ -64,9 +65,60 @@
                 </select>
                 <input id="phone" type="tel" name="phone" class="form-input" />
               </div>
-            </form>
-            <div class="login-options">
+            </form> -->
+            <!-- <div class="login-options">
               <button id="WA" class="btn btn-disabled">Sign In</button>
+            </div> -->
+            <p>Don't have an account yet?</p>
+            <button
+              onclick='document.getElementById("id01").style.display="block"'
+              style='width: auto'
+            >
+              Sign up
+            </button>
+
+            <div id='id01' class='modal'>
+              <form class='modal-content animate' method="POST">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          
+                </div>
+
+                <div class="container">
+                  <label><b>Username</b></label>
+                  <input
+                    type="text"
+                    placeholder='Enter Username here'
+                    name='uname'
+                    required
+                  />
+
+                  <label><b>Password</b></label>
+                  <input
+                    type='password'
+                    placeholder='Enter Password here'
+                    name='psw'
+                    required
+                  />
+                  <label><b>Email</b></label>
+                  <input
+                    type='email'
+                    placeholder='Enter your email here'
+                    name='mail'
+                    required
+                  />
+
+                  <button type='submit'> <a href="../views/history.html">Sign up </a></button>
+                  
+                </div>
+
+                <div class='container' style='background-color: #f1f1f1'>
+                  <button
+                    type='button'
+                    onclick='document.getElementById("id01").style.display="none"'
+                    class='cancelbtn'> Cancel </button>
+                </div>
+              </form>
             </div>
           </section>
         </div>
